@@ -1,14 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Задание: Даны три точки A(x1,y1), B(x2,y2) и C(x3,y3).
+ * Определить, будут ли они расположены на одной прямой.
  */
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
-/**
- *Задание: Даны три точки A(x1,y1), B(x2,y2) и C(x3,y3). Определить, будут ли они расположены на одной прямой
- * @author Vadim
- */
 public class Task0203 {
     public static void main (String [] args){
         double x1 = -2;
@@ -22,7 +17,6 @@ public class Task0203 {
             System.out.println("Yes");    
         } else {
             System.out.println("No");
-            
         }
     }
 }

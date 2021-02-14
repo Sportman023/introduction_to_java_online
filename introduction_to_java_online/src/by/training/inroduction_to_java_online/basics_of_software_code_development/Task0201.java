@@ -1,14 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Задание: Даны два угла треугольника (в градусах).
+ * Определить, существует ли такой треугольник, и если да,
+ * то будет ли он прямоугольный.
  */
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
-/**
- *Задание: Даны два угла треугольника (в градусах). Определить, существует ли такой треугольник, и если да, то будет ли он прямоугольный.
- * @author Vadim
- */
 public class Task0201 {
     public static void main (String [] args){
         float angleA = 45f;
@@ -23,6 +19,7 @@ public class Task0201 {
                 outPut = outPut + " и он НЕ прямоугольный.";
             }
         }
+
         System.out.println("Треугольник с углами " + angleA + " и " + angleB + outPut);
     }
     
