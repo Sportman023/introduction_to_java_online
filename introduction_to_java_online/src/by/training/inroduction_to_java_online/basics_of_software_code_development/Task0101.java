@@ -1,4 +1,4 @@
-package by.epam.inroduction_to_java_online.basics_of_software_code_development;
+package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 //Задание: найдите значение функции: z = ((a-3)*b/2)+c
 

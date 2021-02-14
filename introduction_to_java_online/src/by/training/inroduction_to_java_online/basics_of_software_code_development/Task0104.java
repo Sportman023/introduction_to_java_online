@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package by.epam.inroduction_to_java_online.basics_of_software_code_development;
+package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
  *Задание: Дано действительное число R вида nnn.ddd. Поменять местами дробную и цедую части числа.

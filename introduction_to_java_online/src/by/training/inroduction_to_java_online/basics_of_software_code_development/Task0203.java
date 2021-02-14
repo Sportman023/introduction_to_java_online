@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package by.epam.inroduction_to_java_online.basics_of_software_code_development;
+package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
  *Задание: Даны три точки A(x1,y1), B(x2,y2) и C(x3,y3). Определить, будут ли они расположены на одной прямой
