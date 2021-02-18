@@ -32,6 +32,6 @@ public class Task0101 {
         double z = ((a - 3) * b / 2.0) + c;
         
         System.out.println("При a = " + a + ", b = " + b + " и c = " + c 
-                +" значение функции z = " + z);
+                + " значение функции z = " + z);
     }
 }
