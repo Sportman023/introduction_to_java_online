@@ -19,19 +19,21 @@
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Найти max{min(a,b),min(a,b)}
+ * Задание: найдите значение функции: z = ((a-3)*b/2)+c
  * 
  * @version
  * @author Vadim Ortman 
  */
-public class Task0202 {
+public class LinearProgramsTask01 {
     public static void main (String [] args){
-        int a = 9;
-        int b = 5;
-        int c = 1;
-        int d = 7;
-        int result = Math.max(Math.min(a, b), Math.min(c, d));
+        double a = 2;
+        double b = 7;
+        double c = 12;        
+        double z;
         
-        System.out.println("max{min(a,b),min(a,b)} = " + result);
+        z = ((a - 3) * b / 2.0) + c;
+        
+        System.out.println("При a = " + a + ", b = " + b + " и c = " + c 
+                + " значение функции ((a-3)*b/2)+c = " + z);
     }
 }

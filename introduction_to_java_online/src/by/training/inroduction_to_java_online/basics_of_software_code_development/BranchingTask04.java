@@ -25,7 +25,7 @@ package by.training.inroduction_to_java_online.basics_of_software_code_developme
  * @version
  * @author Vadim Ortman 
  */
-public class Task0204 {
+public class BranchingTask04 {
         public static void main (String [] args){
         int A = 2;
         int B = 8;
@@ -34,11 +34,17 @@ public class Task0204 {
         int y = 16;
         int z = 3;
         
-        int minAB = Math.min(A,B);
-        int maxAB = Math.max(A, B);
+        int minAB;
+        int maxAB;
         
-        int minXYZ = Math.min(Math.min(x, y),Math.min(y, z));
-        int midXYZ = (x + y + z)- minXYZ 
+        int minXYZ;
+        int midXYZ;
+        
+        minAB = Math.min(A,B);
+        maxAB = Math.max(A, B);
+        
+        minXYZ = Math.min(Math.min(x, y),Math.min(y, z));
+        midXYZ = (x + y + z)- minXYZ 
                 - Math.max(Math.max(x, y),Math.max(y, z));
         
         System.out.println("minAB = " + minAB +  " minXYZ = " + minXYZ + "\n"

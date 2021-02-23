@@ -19,21 +19,24 @@
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Вычислить значение выражения по формуле (все переменные принимают 
- * действительные значения):
- * ((Math.sin(a) + Math.cos(b)) / (Math.cos(a) - Math.sin(b))) * Math.tan(a * b)
+ * Задание: Вычислите значения функции на отрезке [a,b] с шагом h
+ * y = x, x > 2 S -x, x <= 2.
  * 
  * @version
  * @author Vadim Ortman 
  */
-public class Task0103 {    
+public class CyclesTask02 {
     public static void main (String [] args){
-        double a = 6;
-        double b = 7;
-        double z = ((Math.sin(a) + Math.cos(b)) / (Math.cos(a) - Math.sin(b)))
-                * Math.tan(a * b);
+        int a = -10;
+        int b = 10;
+        int h = 3;
         
-        System.out.println("При a = " + a + ", b = " + b 
-                + " значение функции z = " + z);
+        for (int x = a; x <= b; x += h){
+            if (x > 2){
+                System.out.println("x = " + x + "; y = " + x);
+            } else{
+                System.out.println("x = " + x + "; y = " + -x);
+            }
+        }
     }
 }

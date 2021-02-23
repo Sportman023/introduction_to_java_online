@@ -19,29 +19,30 @@
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Даны два угла треугольника (в градусах).
- * Определить, существует ли такой треугольник, и если да,
- * то будет ли он прямоугольный.
+ * Задание: Просумировать все числа от 1 до предложенного числа.
  * 
  * @version
  * @author Vadim Ortman 
  */
-public class Task0201 {
+public class CyclesTask01 {
     public static void main (String [] args){
-        float angleA = 45f;
-        float angleB = 90f;
-        String outPut = " не существует";
+        int toNumber = 2000;
+        int result = 0;
+        boolean variableIsOverflowed = false;
         
-        if ((angleA > 0) && (angleB > 0) && ((180 - angleA - angleB)>0)){
-            outPut = " существует";
-            if (angleA == 90f || angleB == 90f){
-                outPut = outPut + " и он прямоугольный.";
-            } else {
-                outPut = outPut + " и он НЕ прямоугольный.";
+        for (int i = 1; i <= toNumber; i++){
+            if((result + i) < result){
+                System.out.println("I can't finish the calculation because "
+                        + "variable is overflowed!");
+                variableIsOverflowed = true;
+                break;
             }
+            result += i;
         }
-
-        System.out.println("Треугольник с углами " + angleA + " и " + angleB + outPut);
+        
+        if(!variableIsOverflowed){
+            System.out.println("Sum of all numbers from 1 to " + String.format("%,d", toNumber) 
+                    + " is " + String.format("%,d", result));
+        }
     }
-    
 }

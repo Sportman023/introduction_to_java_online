@@ -20,12 +20,12 @@ package by.training.inroduction_to_java_online.basics_of_software_code_developme
 
 /**
  * Задание: Вычислить значение функции:
- * F(x) = x^2 - 3x + 9 for x<=3, S 1/(x^3 + 6) for x >3
+ * F(x) = x^2 - 3x + 9 for x <=3, S 1/(x^3 + 6) for x >3
  * 
  * @version
  * @author Vadim Ortman 
  */
-public class Task0205 {
+public class BranchingTask05 {
     public static void main (String [] args){
         double x = -1.0d;
 

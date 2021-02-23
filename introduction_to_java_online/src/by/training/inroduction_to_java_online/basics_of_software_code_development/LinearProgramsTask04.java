@@ -19,20 +19,24 @@
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Составить программу нахождения произведения квадратов
- * первых двухсот чисел.
+ * Задание: Дано действительное число R вида nnn.ddd.
+ * Поменять местами дробную и цедую части числа.
  * 
  * @version
  * @author Vadim Ortman 
  */
-public class Task0304 {
+public class LinearProgramsTask04 {
     public static void main (String [] args){
-        long result = 1;
-
-        for (int i = 1; i <= 200; i++){
-            result *= Math.pow(i, 2);
-        }
-
-        System.out.println(String.format("Произведение квадратов первых 200 чисел = %,d", result));
+        double nnnddd;
+        int nnn;
+        double ddd;
+        double dddnnn;
+        
+        nnnddd = 123.456;
+        nnn = (int) nnnddd;
+        ddd = nnnddd - nnn;
+        dddnnn = Math.round(ddd * 1000) + nnn / 1000;
+        
+        System.out.println("nnn.ddd: " + nnnddd + "; ddd.nnn " + dddnnn);
     }
 }

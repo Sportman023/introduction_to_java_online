@@ -19,22 +19,27 @@
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Вычислить значение выражения по формуле (все переменные принимают 
- * действительные значения):
- * (b + Math.sqrt(b * b + 4 * a * c)) / (2 * a) - Math.pow(a, 3) + Math.pow(b,-2)
+ * Задание: Даны числовой ряд и некоторое число е.
+ * Найти сумму тех членов ряда, модуль которых больше или равен заданному е.
+ * Общий член ряда имеет вид: 1/2^n + 1/3^n
  * 
  * @version
  * @author Vadim Ortman 
  */
-public class Task0102 {
-    public static void main (String [] args){
-        double a = 6;
-        double b = 7;
-        double c = 12;        
-        double z = (b + Math.sqrt(b * b + 4 * a * c)) / (2 * a) - Math.pow(a, 3)
-                + Math.pow(b,-2);
+public class CyclesTask05 {
+   public static void main (String[] args){
+        double e = 1e-9d;
+        int n = 50;
+        double result = 0d;
+       
+        for (int i = 0; i <= n; i++){
+            double temp = 1/Math.pow(2, i) + 1/Math.pow(3, i);
+
+            if(Math.abs(temp) >= e){
+               result += temp;
+            }
+        }
         
-        System.out.println("При a = " + a + ", b = " + b + " и c = " + c 
-                + " значение функции z = " + z);
-    }
+        System.out.println("Result = " + result);
+   }
 }

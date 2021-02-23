@@ -19,19 +19,32 @@
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: найдите значение функции: z = ((a-3)*b/2)+c
+ * Задание: Даны три точки A(x1,y1), B(x2,y2) и C(x3,y3).
+ * Определить, будут ли они расположены на одной прямой.
  * 
  * @version
  * @author Vadim Ortman 
  */
-public class Task0101 {
+public class BranchingTask03 {
     public static void main (String [] args){
-        double a = 6;
-        double b = 7;
-        double c = 12;        
-        double z = ((a - 3) * b / 2.0) + c;
+        double x1;
+        double y1;
+        double x2;
+        double y2;
+        double x3;
+        double y3;
         
-        System.out.println("При a = " + a + ", b = " + b + " и c = " + c 
-                + " значение функции z = " + z);
+        x1 = -2;
+        y1 = 2;
+        x2 = -6;
+        y2 = 0;
+        x3 = -2;
+        y3 = 2;
+        
+        if(((y1 - y2) * (x1 - x3) - (y1 - y3) * (x1 - x2)) <= 1e-9){
+            System.out.println("Yes");    
+        } else {
+            System.out.println("No");
+        }
     }
 }

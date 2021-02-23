@@ -25,11 +25,14 @@ import java.util.Scanner;
  * @version 
  * @author Vadim Ortman
  */
-public class Task0307 {
+public class CyclesTask07 {
     public static void main(String[] args) {
-        int m = Integer.parseInt(new Scanner(System.in).nextLine());
-        int n = Integer.parseInt(new Scanner(System.in).nextLine());
+        int m;
+        int n;
         
+        m = enterFromConsole("Введите число 1 ");
+        n = enterFromConsole("Введите число 2 ");
+
         for (int i = m; i <= n; i++){
             System.out.println("Делители для числа " + i + ":");
             for (int j = 2; j < n; j++){
@@ -38,6 +41,21 @@ public class Task0307 {
                 }
             }
         }
-        
     }
+            public static int enterFromConsole(String message){
+                Scanner sc;
+                
+                sc = new Scanner(System.in);
+                
+                System.out.print(message);
+                
+                while(!sc.hasNextInt()){
+                    String ln;
+                    ln = sc.nextLine();
+                    
+                    System.out.print(ln + " не целое число\n" + message);
+                }
+                
+                return sc.nextInt();
+            }
 }

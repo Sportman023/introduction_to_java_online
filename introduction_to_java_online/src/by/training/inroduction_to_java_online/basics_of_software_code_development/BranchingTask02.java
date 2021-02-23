@@ -19,19 +19,25 @@
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Найти сумму квадратов первых ста чисел.
+ * Задание: Найти max{min(a,b),min(a,b)}
  * 
  * @version
  * @author Vadim Ortman 
  */
-public class Task0303 {
+public class BranchingTask02 {
     public static void main (String [] args){
-        long result = 0;
-
-        for (int i = 1; i <= 100; i++){
-            result += Math.pow(i, 2);
-        }
-
-        System.out.println(String.format("Sum of sqr first 100 num is %,d", result));
-    } 
+        int a;
+        int b;
+        int c;
+        int d;
+        int result;
+        
+        a = 9;
+        b = 5;
+        c = 1;
+        d = 7;
+        result = Math.max(Math.min(a, b), Math.min(c, d));
+        
+        System.out.println("max{min(a,b),min(a,b)} = " + result);
+    }
 }

@@ -19,31 +19,29 @@
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Дано натуральное число Т,
- * которое представляет длительность прошедшего времени в секундах.
- * Вывести данное значение длительности в часах, минутах и секундах
- * в следующей форме: ННч ММмин SSc.
+ * Задание: Для данной области составить программу, которая печатает
+ * true, если сточка с координатами (x, y) принадлежит закрашенной области,
+ * и false — в противном случае
  * 
  * @version
  * @author Vadim Ortman 
  */
-public class Task0105 {
+public class LinearProgramsTask06 {
     public static void main (String [] args){
-        int T = 9*3600 + 8*60 + 17;        
-        int h = Math.round(T/3600);
-        int m = Math.round((T%3600)/60);
-        int s = Math.round((T%3600)%60);
+        double x;
+        double y;
+        boolean result;
         
-        System.out.println(addZero(h) + "ч " + addZero(m) + "м " 
-                + addZero(s) + "с");
-        }
-    
-    public static String addZero(int t){
-        String tS = t + "";
+        x = 4;
+        y = -0.1;
+        result = false;
         
-        if (t < 10){
-            tS = "0" + tS;
+        if(((x >= -4 && x < -2) && (y >= -3 && y < 0))
+                || ((x >= -2 && x < 2) && (y >= -3 && y < 4))
+                || ((x >= 2 && x < 4) && (y >= -3 && y < 0))){
+           result = true; 
         }
-    return tS;
+        
+        System.out.println(result);
     }
 }

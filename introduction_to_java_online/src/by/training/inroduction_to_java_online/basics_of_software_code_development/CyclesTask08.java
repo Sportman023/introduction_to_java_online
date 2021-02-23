@@ -24,7 +24,7 @@ import java.util.*;
  * @version 
  * @author Vadim Ortman
  */
-public class Task0308 {
+public class CyclesTask08 {
     public static void main(String[] args) {
         double a = 123.044012D;
         String aStr;
@@ -33,19 +33,22 @@ public class Task0308 {
         ArrayList <Character> numList = new ArrayList <Character>();
         
         if (a % 1 == 0){
-            aStr = Integer.toString((int) a);
+            aStr = Integer.toString((int)a); /** чтобы не учитвать ноль если 
+                                                    число целое (1.0) */
         } else {
             aStr = Double.toString(a);
         }
 
         if (b % 1 == 0){
-            bStr = Integer.toString((int) b);
+            bStr = Integer.toString((int)b); /** чтобы не учитвать ноль если 
+                                                    число целое (1.0) */   
         } else {
             bStr = Double.toString(b);
         }
         
         for (int i = 0; i < aStr.length(); i++){
-            char aChr = aStr.charAt(i);
+            char aChr;
+            aChr = aStr.charAt(i);
                     
             if (!numList.contains(aChr)){
                 numList.add(aChr);

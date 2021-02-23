@@ -19,16 +19,19 @@
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Вывести на экран соответствий между символами и их численными
- * обозначениями в памяти компьютера.
+ * Задание: Найти сумму квадратов первых ста чисел.
  * 
- * @version 
- * @author Vadim Ortman
+ * @version
+ * @author Vadim Ortman 
  */
-public class Task0306 {
-    public static void main(String[] args) {
-        char c = '}';
-        int iC = (int) c;
-        System.out.println("Char " + c + " = " + iC);
-    }
+public class CyclesTask03 {
+    public static void main (String [] args){
+        long result = 0;        
+        
+        for (int i = 1; i <= 100; i++){
+            result += Math.pow(i, 2);
+        }
+        System.out.println(String.format("Sum of sqr first 100 num is %,d", 
+                result));
+        }
 }
