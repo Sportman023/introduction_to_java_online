@@ -49,7 +49,7 @@ public class CyclesTask07 {
                 
                 System.out.print(message);
                 
-                while(!sc.hasNextInt()){
+                while (!sc.hasNextInt()){
                     String ln;
                     ln = sc.nextLine();
                     

@@ -36,7 +36,7 @@ public class LinearProgramsTask06 {
         y = -0.1;
         result = false;
         
-        if(((x >= -4 && x < -2) && (y >= -3 && y < 0))
+        if (((x >= -4 && x < -2) && (y >= -3 && y < 0))
                 || ((x >= -2 && x < 2) && (y >= -3 && y < 4))
                 || ((x >= 2 && x < 4) && (y >= -3 && y < 0))){
            result = true; 

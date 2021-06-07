@@ -31,7 +31,7 @@ public class CyclesTask04 {
         boolean variableIsOverflowed = false;
         
         for (int i = 1; i <= 200; i++){
-            if((result * (long) Math.pow(i,2)) < result){
+            if ((result * (long) Math.pow(i,2)) < result){
                 System.out.println("I can't finish the calculation because "
                         + "variable is overflowed!");
                 variableIsOverflowed = true;
@@ -39,7 +39,7 @@ public class CyclesTask04 {
             }
             result *= Math.pow(i, 2);
         }
-        if(!variableIsOverflowed){
+        if (!variableIsOverflowed){
             System.out.println(String.format("Произведение квадратов первых 200"
                     + " чисел = %,d", result));
         }

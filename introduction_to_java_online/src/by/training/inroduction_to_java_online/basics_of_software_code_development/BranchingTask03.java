@@ -41,7 +41,7 @@ public class BranchingTask03 {
         x3 = -2;
         y3 = 2;
         
-        if(((y1 - y2) * (x1 - x3) - (y1 - y3) * (x1 - x2)) <= 1e-9){
+        if (((y1 - y2) * (x1 - x3) - (y1 - y3) * (x1 - x2)) <= 1e-9){
             System.out.println("Yes");    
         } else {
             System.out.println("No");

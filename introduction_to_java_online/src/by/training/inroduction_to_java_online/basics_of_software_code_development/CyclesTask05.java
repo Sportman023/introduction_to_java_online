@@ -35,7 +35,7 @@ public class CyclesTask05 {
         for (int i = 0; i <= n; i++){
             double temp = 1/Math.pow(2, i) + 1/Math.pow(3, i);
 
-            if(Math.abs(temp) >= e){
+            if (Math.abs(temp) >= e){
                result += temp;
             }
         }

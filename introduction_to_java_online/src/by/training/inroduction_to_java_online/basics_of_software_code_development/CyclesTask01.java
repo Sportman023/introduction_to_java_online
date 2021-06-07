@@ -31,7 +31,7 @@ public class CyclesTask01 {
         boolean variableIsOverflowed = false;
         
         for (int i = 1; i <= toNumber; i++){
-            if((result + i) < result){
+            if ((result + i) < result){
                 System.out.println("I can't finish the calculation because "
                         + "variable is overflowed!");
                 variableIsOverflowed = true;
@@ -40,7 +40,7 @@ public class CyclesTask01 {
             result += i;
         }
         
-        if(!variableIsOverflowed){
+        if (!variableIsOverflowed){
             System.out.println("Sum of all numbers from 1 to " + String.format("%,d", toNumber) 
                     + " is " + String.format("%,d", result));
         }
