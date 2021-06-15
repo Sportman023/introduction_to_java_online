@@ -24,9 +24,6 @@ package by.training.inroduction_to_java_online.algorithmization;
  * 
  * @author Vadim Ortman
  */
-
-
-
 public class ArraysOfArraysTask16 {
     public static void main(String[] args) {
         int size;
