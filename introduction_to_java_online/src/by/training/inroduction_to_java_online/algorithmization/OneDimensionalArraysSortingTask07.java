@@ -61,7 +61,8 @@ public class OneDimensionalArraysSortingTask07 {
                     break;
                 }
                 
-                if (ia + 1 < lengthA && arrayA[ia] <= arrayB[ib] && arrayA[ia + 1] > arrayB[ib]) {
+                if (ia + 1 < lengthA && arrayA[ia] <= arrayB[ib] 
+                        && arrayA[ia + 1] > arrayB[ib]) {
                     System.out.println("b" + ib + " after a" + ia);
                     currentIA = ia;
                     break;

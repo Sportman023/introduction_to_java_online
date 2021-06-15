@@ -50,21 +50,26 @@ public class OneDimensionalArraysSortingTask08 {
             if (denominatorArr[i] == denominatorArr[i + 1]) {
                 
             } else if (denominatorArr[i] % denominatorArr[i + 1] == 0) {
-                numeratorArr[i + 1] = numeratorArr[i + 1] * (denominatorArr[i] / denominatorArr[i + 1]);
+                numeratorArr[i + 1] = numeratorArr[i + 1] 
+                        * (denominatorArr[i]/ denominatorArr[i + 1]);
                 denominatorArr[i + 1] = denominatorArr[i];
                 i = i - 2;
             } else if (denominatorArr[i + 1] % denominatorArr[i] == 0) {
-                numeratorArr[i] = numeratorArr[i] * (denominatorArr[i + 1] / denominatorArr[i]);
+                numeratorArr[i] = numeratorArr[i] 
+                        * (denominatorArr[i + 1] / denominatorArr[i]);
                 denominatorArr[i] = denominatorArr[i + 1];
                 i = i - 2;
             } else {
-                for (int j = 2; j * denominatorArr[i] <= denominatorArr[i] * denominatorArr[i + 1]; j++) {
+                for (int j = 2; j * denominatorArr[i] 
+                        <= denominatorArr[i] * denominatorArr[i + 1]; j++) {
                     if (denominatorArr[i] * j % denominatorArr[i + 1] == 0) {
                         numeratorArr[i] = numeratorArr[i] * j;
                         denominatorArr[i] = denominatorArr[i] * j;
                         
-                        numeratorArr[i + 1] = numeratorArr[i + 1] * (denominatorArr[i] / denominatorArr[i + 1]);
-                        denominatorArr[i + 1] = denominatorArr[i + 1] * (denominatorArr[i] / denominatorArr[i + 1]);
+                        numeratorArr[i + 1] = numeratorArr[i + 1] 
+                                * (denominatorArr[i] / denominatorArr[i + 1]);
+                        denominatorArr[i + 1] = denominatorArr[i + 1] 
+                                * (denominatorArr[i] / denominatorArr[i + 1]);
                         i = i - 2;
                         break;
                     }

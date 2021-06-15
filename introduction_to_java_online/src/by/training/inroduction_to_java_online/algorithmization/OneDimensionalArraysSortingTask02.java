@@ -17,9 +17,10 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Даны две последовательности a1 <= a2 <= ... <= an и 
- * b1 <= b2 <= ... <= bm Образовать из них новую последовательность чисел так,
- * чтобы она тоже была неубывающей.
+ * Задание: Даны две последовательности a1 меньше либо равно a2
+ * меньше либо равно ... меньше либо равно an и b1 меньше либо равно b2 
+ * меньше либо равно ... меньше либо равно bm.
+ * Образовать из них новую последовательность чисел так, чтобы она тоже была неубывающей.
  * Примечание. Дополнительный массив не использовать.
  * 
  * @author Vadim Ortman
@@ -47,7 +48,8 @@ public class OneDimensionalArraysSortingTask02 {
         currentIndex2 = 0;
         
         for (int i = 0; i < array3Length; i++) {
-            if (currentIndex1 < array1Length && array1[currentIndex1] < array2[currentIndex2]) {
+            if (currentIndex1 < array1Length 
+                    && array1[currentIndex1] < array2[currentIndex2]) {
                 array3[i] = array1[currentIndex1];
                 currentIndex1++;
             } else if (currentIndex2 < array2Length) {
