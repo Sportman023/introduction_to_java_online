@@ -1,4 +1,4 @@
-package by.training.inroduction_to_java_online.programming_with_classes;
+package by.training.inroduction_to_java_online.programming_with_classes.simple_classes_and_objects;
 
 import java.sql.Time;
 

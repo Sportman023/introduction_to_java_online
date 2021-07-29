@@ -1,4 +1,4 @@
-package by.training.inroduction_to_java_online.programming_with_classes.simple_classes_and_objects_task04;
+package by.training.inroduction_to_java_online.programming_with_classes.simple_classes_and_objects.task04;
 
 public class Depo {
 	private static final int MAX_TRAIN_NUMBER = 5;
