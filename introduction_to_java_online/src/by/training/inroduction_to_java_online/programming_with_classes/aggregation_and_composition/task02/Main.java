@@ -1,4 +1,4 @@
-package by.training.inroduction_to_java_online.programming_with_classes.simple_classes_and_objects.aggregation_and_composition.task02;
+package by.training.inroduction_to_java_online.programming_with_classes.aggregation_and_composition.task02;
 /**
 * Задача: Создать объект класса Автомобиль, используя классы Колесо, Двигатель.
 * Методы: ехать, заправляться, менять колесо, вывести на консоль марку автомобиля.

@@ -1,4 +1,4 @@
-package by.training.inroduction_to_java_online.programming_with_classes.simple_classes_and_objects.aggregation_and_composition.task02;
+package by.training.inroduction_to_java_online.programming_with_classes.aggregation_and_composition.task02;
 
 public class Engine {
 	private Car car;

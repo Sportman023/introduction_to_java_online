@@ -1,4 +1,4 @@
-package by.training.inroduction_to_java_online.programming_with_classes.simple_classes_and_objects.aggregation_and_composition.task01;
+package by.training.inroduction_to_java_online.programming_with_classes.aggregation_and_composition.task01;
 /**
 * Задача: Создать объект класса Текст, используя классы Предложение, Слово.
 * Методы: дополнить текст, вывести на консоль текст, заголовок текста.
