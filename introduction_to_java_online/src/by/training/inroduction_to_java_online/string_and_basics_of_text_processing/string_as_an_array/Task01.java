@@ -3,12 +3,11 @@ package by.training.inroduction_to_java_online.string_and_basics_of_text_process
 import java.util.Iterator;
 
 /**
- * Задание: Дан массив названий переменных в camelCase.
- * Преобразовать названия в snake_case.
+ * Р—Р°РґР°РЅРёРµ: Р”Р°РЅ РјР°СЃСЃРёРІ РЅР°Р·РІР°РЅРёР№ РїРµСЂРµРјРµРЅРЅС‹С… РІ camelCase.
+ * РџСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ РЅР°Р·РІР°РЅРёСЏ РІ snake_case.
  * 
  * @author Vadim Ortman
  */
-
 public class Task01 {
 
 	public static void main(String[] args) {

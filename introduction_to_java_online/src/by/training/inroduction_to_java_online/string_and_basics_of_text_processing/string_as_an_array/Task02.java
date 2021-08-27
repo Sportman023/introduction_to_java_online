@@ -1,7 +1,7 @@
 package by.training.inroduction_to_java_online.string_and_basics_of_text_processing.string_as_an_array;
 
 /**
- * Задание: Замените в строке все вхождения 'word' на 'letter'.
+ * Р—Р°РґР°РЅРёРµ: Р—Р°РјРµРЅРёС‚Рµ РІ СЃС‚СЂРѕРєРµ РІСЃРµ РІС…РѕР¶РґРµРЅРёСЏ 'word' РЅР° 'letter'.
  * 
  * @author Vadim Ortman
  */

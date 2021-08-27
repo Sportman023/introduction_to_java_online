@@ -3,7 +3,7 @@ package by.training.inroduction_to_java_online.string_and_basics_of_text_process
 import java.util.Iterator;
 
 /**
- * Задание: Из заданной строки получить новую, повторив каждый символ дважды.
+ * Р—Р°РґР°РЅРёРµ: РР· Р·Р°РґР°РЅРЅРѕР№ СЃС‚СЂРѕРєРё РїРѕР»СѓС‡РёС‚СЊ РЅРѕРІСѓСЋ, РїРѕРІС‚РѕСЂРёРІ РєР°Р¶РґС‹Р№ СЃРёРјРІРѕР» РґРІР°Р¶РґС‹.
  * 
  * @author Vadim Ortman
  */

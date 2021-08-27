@@ -1,27 +1,27 @@
 package by.training.inroduction_to_java_online.programming_with_classes.simple_classes_and_objects;
 
 /**
-* Задача: Создать класс Book, спецификация которого приведена ниже.
-* Определить конструкторы, set- и get- методы и метод toString().
-* Создать второй класс, агрегирующий массив типа Book, с подходящими конструкторами и методами.
-* Задать критерии выбора данных и вывести эти данные на консоль.
-* Book: id, название, автор(ы), издательство, год издания, количество страниц, цена, тип переплета.
-* Найти и вывести:
-* a) список книг заданного автора;
-* b) список книг, выпущенных заданным издательством;
-* c) список книг, выпущенных после заданного года.
+* Р—Р°РґР°С‡Р°: РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ Book, СЃРїРµС†РёС„РёРєР°С†РёСЏ РєРѕС‚РѕСЂРѕРіРѕ РїСЂРёРІРµРґРµРЅР° РЅРёР¶Рµ.
+* РћРїСЂРµРґРµР»РёС‚СЊ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹, set- Рё get- РјРµС‚РѕРґС‹ Рё РјРµС‚РѕРґ toString().
+* РЎРѕР·РґР°С‚СЊ РІС‚РѕСЂРѕР№ РєР»Р°СЃСЃ, Р°РіСЂРµРіРёСЂСѓСЋС‰РёР№ РјР°СЃСЃРёРІ С‚РёРїР° Book, СЃ РїРѕРґС…РѕРґСЏС‰РёРјРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°РјРё Рё РјРµС‚РѕРґР°РјРё.
+* Р—Р°РґР°С‚СЊ РєСЂРёС‚РµСЂРёРё РІС‹Р±РѕСЂР° РґР°РЅРЅС‹С… Рё РІС‹РІРµСЃС‚Рё СЌС‚Рё РґР°РЅРЅС‹Рµ РЅР° РєРѕРЅСЃРѕР»СЊ.
+* Book: id, РЅР°Р·РІР°РЅРёРµ, Р°РІС‚РѕСЂ(С‹), РёР·РґР°С‚РµР»СЊСЃС‚РІРѕ, РіРѕРґ РёР·РґР°РЅРёСЏ, РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂР°РЅРёС†, С†РµРЅР°, С‚РёРї РїРµСЂРµРїР»РµС‚Р°.
+* РќР°Р№С‚Рё Рё РІС‹РІРµСЃС‚Рё:
+* a) СЃРїРёСЃРѕРє РєРЅРёРі Р·Р°РґР°РЅРЅРѕРіРѕ Р°РІС‚РѕСЂР°;
+* b) СЃРїРёСЃРѕРє РєРЅРёРі, РІС‹РїСѓС‰РµРЅРЅС‹С… Р·Р°РґР°РЅРЅС‹Рј РёР·РґР°С‚РµР»СЊСЃС‚РІРѕРј;
+* c) СЃРїРёСЃРѕРє РєРЅРёРі, РІС‹РїСѓС‰РµРЅРЅС‹С… РїРѕСЃР»Рµ Р·Р°РґР°РЅРЅРѕРіРѕ РіРѕРґР°.
 *
 */
 
 public class SimpleClassesAndObjectsTask09 {
 
 	public static void main(String[] args) {
-		String[] names = {"Core Java Volume I – Fundamentals", "Effective Java", "Java: A Beginner’s Guide",
+		String[] names = {"Core Java Volume I пїЅ Fundamentals", "Effective Java", "Java: A BeginnerпїЅs Guide",
 				"Java - The Complete Reference", "Head First Java"};
 		String[] authors = {"Cay S. Horstmann", "Joshua Bloch", "Herbert Schildt", "Herbert Schildt",
 				"Kathy Sierra & Bert Bates"};
 		String[] publishingHouse = {"Prentice Hall", "Addison Wesley", "McGraw-Hill Education",
-				"McGraw-Hill Education", "Shroff/O’Reilly"};
+				"McGraw-Hill Education", "Shroff/OпїЅReilly"};
 		int[] publishingYear = {2019, 2017, 2019, 2019, 2018};
 		int[] pagesNumber = {843, 600, 667, 1167, 670};
 		int[] price = {2203, 4386, 2550, 4300, 2000};
@@ -34,21 +34,21 @@ public class SimpleClassesAndObjectsTask09 {
 			book[i] = new SimpleClassesAndObjectsTask09().new Book(names[i], authors[i], publishingHouse[i], publishingYear[i], pagesNumber[i], price[i], bindingType[i]);
 		}
 		
-		System.out.println("Книги автора Joshua Bloch");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Joshua Bloch");
 		for (int i = 0; i < book.length; i++) {
 			if (book[i].authors.equals("Joshua Bloch")) {
 				System.out.println(book[i].toString());
 			}
 		}
 		
-		System.out.println("Книги издательского дома McGraw-Hill Education");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ McGraw-Hill Education");
 		for (int i = 0; i < book.length; i++) {
 			if (book[i].publishingHouse.equals("McGraw-Hill Education")) {
 				System.out.println(book[i].toString());
 			}
 		}
 		
-		System.out.println("Книги изданные после 2018 год");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 2018 пїЅпїЅпїЅ");
 		for (int i = 0; i < book.length; i++) {
 			if (book[i].publishingYear > 2018) {
 				System.out.println(book[i].toString());

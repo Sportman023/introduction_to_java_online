@@ -1,12 +1,13 @@
 package by.training.inroduction_to_java_online.programming_with_classes.simple_classes_and_objects;
 
+
 /**
-* Задача: Создайте класс с именем Student,
-* содержащий поля: фамилия и инициалы, номер группы,
-* успеваемость (массив из пяти элементов).
-* Создайте массив из десяти элементов такого типа.
-* Добавьте возможность вывода фамилий и номеров групп студентов,
-* имеющих оценки, равные только 9 или 10.
+* Р—Р°РґР°С‡Р°: РЎРѕР·РґР°Р№С‚Рµ РєР»Р°СЃСЃ СЃ РёРјРµРЅРµРј Student,
+* СЃРѕРґРµСЂР¶Р°С‰РёР№ РїРѕР»СЏ: С„Р°РјРёР»РёСЏ Рё РёРЅРёС†РёР°Р»С‹, РЅРѕРјРµСЂ РіСЂСѓРїРїС‹,
+* СѓСЃРїРµРІР°РµРјРѕСЃС‚СЊ (РјР°СЃСЃРёРІ РёР· РїСЏС‚Рё СЌР»РµРјРµРЅС‚РѕРІ).
+* РЎРѕР·РґР°Р№С‚Рµ РјР°СЃСЃРёРІ РёР· РґРµСЃСЏС‚Рё СЌР»РµРјРµРЅС‚РѕРІ С‚Р°РєРѕРіРѕ С‚РёРїР°.
+* Р”РѕР±Р°РІСЊС‚Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РІС‹РІРѕРґР° С„Р°РјРёР»РёР№ Рё РЅРѕРјРµСЂРѕРІ РіСЂСѓРїРї СЃС‚СѓРґРµРЅС‚РѕРІ,
+* РёРјРµСЋС‰РёС… РѕС†РµРЅРєРё, СЂР°РІРЅС‹Рµ С‚РѕР»СЊРєРѕ 9 РёР»Рё 10.
 *
 */
 public class SimpleClassesAndObjectsTask03 {
@@ -34,7 +35,7 @@ public class SimpleClassesAndObjectsTask03 {
 		int[] arrMarks = new int [student.getMarks().length];
 		
 		for (int i = 0; i < student.getMarks().length; i++) {
-			arrMarks[i] = (int)(Math.random() * 4) + 7; //оценки от 7 до 10
+			arrMarks[i] = (int)(Math.random() * 4) + 7; //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 7 пїЅпїЅ 10
 		}
 		return arrMarks ;
 	}
@@ -42,7 +43,7 @@ public class SimpleClassesAndObjectsTask03 {
 	private class Student{
 		private String name;
 		private String groupeID;
-		private static final int marksNumber = 5; // кол-во оценок
+		private static final int marksNumber = 5; // пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 		private int[] marks = new int[marksNumber];
 		
 		public String getName() {

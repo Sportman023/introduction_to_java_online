@@ -1,7 +1,7 @@
 package by.training.inroduction_to_java_online.string_and_basics_of_text_processing.string_as_an_object;
 
 /**
- * Задание: Проверить, является ли заданное слово палиндромом.
+ * Р—Р°РґР°РЅРёРµ: РџСЂРѕРІРµСЂРёС‚СЊ, СЏРІР»СЏРµС‚СЃСЏ Р»Рё Р·Р°РґР°РЅРЅРѕРµ СЃР»РѕРІРѕ РїР°Р»РёРЅРґСЂРѕРјРѕРј.
  * 
  * @author Vadim Ortman
  */

@@ -1,7 +1,7 @@
 package by.training.inroduction_to_java_online.string_and_basics_of_text_processing.string_as_an_array;
 
 /**
- * Задание: строке найти количество цифр.
+ * Р—Р°РґР°РЅРёРµ: СЃС‚СЂРѕРєРµ РЅР°Р№С‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ С†РёС„СЂ.
  * 
  * @author Vadim Ortman
  */

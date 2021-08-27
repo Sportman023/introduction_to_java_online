@@ -1,8 +1,8 @@
 package by.training.inroduction_to_java_online.string_and_basics_of_text_processing.string_as_an_object;
 
 /**
- * Задание: С помощью функции копирования и операции конкатенации
- * составить из частей слова “информатика” слово “торт”.
+ * Р—Р°РґР°РЅРёРµ: РЎ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё РєРѕРїРёСЂРѕРІР°РЅРёСЏ Рё РѕРїРµСЂР°С†РёРё РєРѕРЅРєР°С‚РµРЅР°С†РёРё
+ * СЃРѕСЃС‚Р°РІРёС‚СЊ РёР· С‡Р°СЃС‚РµР№ СЃР»РѕРІР° вЂњРёРЅС„РѕСЂРјР°С‚РёРєР°вЂќ СЃР»РѕРІРѕ вЂњС‚РѕСЂС‚вЂќ.
  * 
  * @author Vadim Ortman
  */
@@ -10,7 +10,7 @@ package by.training.inroduction_to_java_online.string_and_basics_of_text_process
 public class Task04 {
 
 	public static void main(String[] args) {
-		String informatika = "информатика";
+		String informatika = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
 		String tort = "";
 
 		tort = tort.concat(String.copyValueOf(informatika.toCharArray(), 7, 1));

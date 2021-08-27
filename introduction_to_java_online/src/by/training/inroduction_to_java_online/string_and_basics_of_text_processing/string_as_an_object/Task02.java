@@ -1,7 +1,7 @@
 package by.training.inroduction_to_java_online.string_and_basics_of_text_processing.string_as_an_object;
 
 /**
- * Задание: В строке вставить после каждого символа 'a' символ 'b'.
+ * Р—Р°РґР°РЅРёРµ: Р’ СЃС‚СЂРѕРєРµ РІСЃС‚Р°РІРёС‚СЊ РїРѕСЃР»Рµ РєР°Р¶РґРѕРіРѕ СЃРёРјРІРѕР»Р° 'a' СЃРёРјРІРѕР» 'b'.
  * 
  * @author Vadim Ortman
  */

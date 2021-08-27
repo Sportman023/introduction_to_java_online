@@ -1,11 +1,10 @@
 package by.training.inroduction_to_java_online.string_and_basics_of_text_processing.string_as_an_array;
 
 /**
- * Задание: В строке найти количество чисел.
+ * Р—Р°РґР°РЅРёРµ: Р’ СЃС‚СЂРѕРєРµ РЅР°Р№С‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР».
  * 
  * @author Vadim Ortman
  */
-
 public class Task04 {
 
 	public static void main(String[] args) {
