@@ -6,16 +6,18 @@ public class Depo {
 	{
 		trains = new Train[MAX_TRAIN_NUMBER];
 	}
-	
+
 	public Depo() {
 	}
-	
+
 	public Train[] getTrains() {
 		return trains;
 	}
+
 	public void setTrains(Train[] trains) {
 		this.trains = trains;
-	}	
+	}
+
 	public void addTrain(Train train) {
 		for (int i = 0; i < MAX_TRAIN_NUMBER; i++) {
 			if (trains[i] == null) {

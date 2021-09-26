@@ -15,20 +15,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
  * Задание: Вывести на экран соответствий между символами и их численными
  * обозначениями в памяти компьютера.
  * 
- * @version 
+ * @version
  * @author Vadim Ortman
  */
 public class CyclesTask06 {
-    public static void main(String[] args) {
-        char c = '}';
-        int iC = (int) c;
-        System.out.println("Char " + c + " = " + iC);
-    }
+	public static void main(String[] args) {
+		char c = '}';
+		int iC = (int) c;
+		System.out.println("Char " + c + " = " + iC);
+	}
 }

@@ -5,12 +5,10 @@ import java.util.ArrayList;
 public class Text {
 	private ArrayList<Paragraph> paragraphs;
 
-
-
 	{
 		paragraphs = new ArrayList<Paragraph>();
 	}
-	
+
 	public ArrayList<Paragraph> getParagraphs() {
 		return paragraphs;
 	}

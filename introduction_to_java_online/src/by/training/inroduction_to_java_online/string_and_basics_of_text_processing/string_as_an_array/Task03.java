@@ -14,16 +14,16 @@ public class Task03 {
 		int digitsCounter;
 		byte ASCII_Code_OF_ZERO = 48;
 		byte ASCII_CODE_OF_NINE = 57;
-		
+
 		byteArrOfString = string.getBytes();
 		digitsCounter = 0;
-		
-		for(int i = 0; i < byteArrOfString.length; i++) {
-			if(byteArrOfString[i] >= ASCII_Code_OF_ZERO && byteArrOfString[i] <= ASCII_CODE_OF_NINE) {
+
+		for (int i = 0; i < byteArrOfString.length; i++) {
+			if (byteArrOfString[i] >= ASCII_Code_OF_ZERO && byteArrOfString[i] <= ASCII_CODE_OF_NINE) {
 				digitsCounter++;
 			}
 		}
-		System.out.println("In string " + "\"" + string +"\" " + digitsCounter + " digits.");
+		System.out.println("In string " + "\"" + string + "\" " + digitsCounter + " digits.");
 	}
 
 }

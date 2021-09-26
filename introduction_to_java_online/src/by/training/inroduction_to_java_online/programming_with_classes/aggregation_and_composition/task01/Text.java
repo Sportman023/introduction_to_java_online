@@ -10,14 +10,15 @@ public class Text {
 	{
 		sentencesList = new ArrayList<Sentence>();
 	}
-	
-	public Text () {
+
+	public Text() {
 
 	}
 
 	public ArrayList<Sentence> getSentencesList() {
 		return sentencesList;
 	}
+
 	public void setSentencesList(ArrayList<Sentence> sentencesList) {
 		this.sentencesList = sentencesList;
 	}

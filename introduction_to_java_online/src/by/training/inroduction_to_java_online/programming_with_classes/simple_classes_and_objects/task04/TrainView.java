@@ -3,13 +3,14 @@ package by.training.inroduction_to_java_online.programming_with_classes.simple_c
 public class TrainView {
 	public TrainView() {
 	}
-	
+
 	public void printTrainInfo(Train train) {
 		if (train != null) {
-			System.out.println("Номер поезда: " + train.getTrainId() + " Пункт назначения: " 
-					+ train.getDestination() + " Время отправления: " + train.getDepurtueTime());
-		}	
-	}	
+			System.out.println("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: " + train.getTrainId() + " пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + train.getDestination()
+					+ " пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + train.getDepurtueTime());
+		}
+	}
+
 	public void printAllTrainsInfo(Depo depo) {
 		Train[] trains;
 		trains = depo.getTrains();

@@ -17,57 +17,55 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Дан массив действительных чисел, размерность которого N.
- * Подсчитать, сколько в нем отрицательных, положительных и нулевых элементов.
+ * Задание: Дан массив действительных чисел, размерность которого N. Подсчитать,
+ * сколько в нем отрицательных, положительных и нулевых элементов.
  * 
  * @author Vadim Ortman
  */
 public class OneDimensionalArraysTask03 {
-    public static void main(String[] args) {
-        double array[];
-        int n;
-        int zeroCounter;
-        int negativeCounter;
-        int positiveCounter;
-        
-        n = 10;
-        array = new double [n];
-        zeroCounter = 0;
-        negativeCounter = 0;
-        positiveCounter = 0;
-        
-        for (int i = 0; i < n; i++) {
-            array[i] = getRandomDouble();
-        }
-        
-        for (int i = 0; i < n; i++) {
-            if (array[i] < 0) {
-                negativeCounter++;
-            } else if (array[i] == 0) {
-                zeroCounter++;
-            }
-        }
-        
-        positiveCounter = n - negativeCounter - zeroCounter;
-        
-        System.out.println("Кол-во отрицательных значений = " + negativeCounter 
-                + "\nКол-во нулевых значений = " + zeroCounter 
-                + "\nКол-во положительных значений = " + positiveCounter);
-    }
-    
-    
-    public static double getRandomDouble(){
-        int sign;
-        double randomDouble;
-        
-        if (Math.random() < 0.5) {
-            sign = -1;
-        } else {
-            sign = 1;
-        }
-        
-        randomDouble = (int) (Math.random() * 100) / 10.0;
-        randomDouble = randomDouble * sign;
-        return randomDouble;
-    }
+	public static void main(String[] args) {
+		double array[];
+		int n;
+		int zeroCounter;
+		int negativeCounter;
+		int positiveCounter;
+
+		n = 10;
+		array = new double[n];
+		zeroCounter = 0;
+		negativeCounter = 0;
+		positiveCounter = 0;
+
+		for (int i = 0; i < n; i++) {
+			array[i] = getRandomDouble();
+		}
+
+		for (int i = 0; i < n; i++) {
+			if (array[i] < 0) {
+				negativeCounter++;
+			} else if (array[i] == 0) {
+				zeroCounter++;
+			}
+		}
+
+		positiveCounter = n - negativeCounter - zeroCounter;
+
+		System.out.println("Кол-во отрицательных значений = " + negativeCounter + "\nКол-во нулевых значений = "
+				+ zeroCounter + "\nКол-во положительных значений = " + positiveCounter);
+	}
+
+	public static double getRandomDouble() {
+		int sign;
+		double randomDouble;
+
+		if (Math.random() < 0.5) {
+			sign = -1;
+		} else {
+			sign = 1;
+		}
+
+		randomDouble = (int) (Math.random() * 100) / 10.0;
+		randomDouble = randomDouble * sign;
+		return randomDouble;
+	}
 }

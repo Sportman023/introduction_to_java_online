@@ -17,35 +17,35 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Дана матрица. Вывести на экран все нечетные столбцы,
- * у которых первый элемент больше последнего.
+ * Задание: Дана матрица. Вывести на экран все нечетные столбцы, у которых
+ * первый элемент больше последнего.
  * 
  * @author Vadim Ortman
  */
 
 public class ArraysOfArraysTask01 {
-    public static void main(String[] args) {
-        int[][] array;
-        int sizeI;
-        int sizeJ;
-        
-        sizeI = 10;
-        sizeJ = 10;
-        array = new int[sizeI][sizeJ];
-                
-        for (int i = 0; i < sizeI; i++) {
-            for (int j = 0; j < sizeJ; j++) {
-                array[i][j] = (int)(Math.random() * 10);
-            }
-        }
-       
-        for (int i = 0; i < sizeI; i++) {
-            for (int j = 0; j < sizeJ; j += 2) {
-                if (array[0][j] > array[sizeI - 1][j]) {
-                    System.out.print(array[i][j] + " ");
-                }
-            }
-            System.out.println("");
-        }
-    }
+	public static void main(String[] args) {
+		int[][] array;
+		int sizeI;
+		int sizeJ;
+
+		sizeI = 10;
+		sizeJ = 10;
+		array = new int[sizeI][sizeJ];
+
+		for (int i = 0; i < sizeI; i++) {
+			for (int j = 0; j < sizeJ; j++) {
+				array[i][j] = (int) (Math.random() * 10);
+			}
+		}
+
+		for (int i = 0; i < sizeI; i++) {
+			for (int j = 0; j < sizeJ; j += 2) {
+				if (array[0][j] > array[sizeI - 1][j]) {
+					System.out.print(array[i][j] + " ");
+				}
+			}
+			System.out.println("");
+		}
+	}
 }

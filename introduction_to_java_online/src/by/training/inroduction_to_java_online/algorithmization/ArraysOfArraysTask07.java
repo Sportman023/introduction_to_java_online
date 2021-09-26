@@ -17,43 +17,44 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Сформировать квадратную матрицу порядка N по правилу:
- * A[I,J] = sin((I^2 - J^2) / N)
+ * Задание: Сформировать квадратную матрицу порядка N по правилу: A[I,J] =
+ * sin((I^2 - J^2) / N)
  * 
  * @author Vadim Ortman
  */
 
 public class ArraysOfArraysTask07 {
-    public static void main(String[] args) {
-        int n;
-        double[][] array;
-        int counter;
-        
-        n = 8;
-        array = new double[n][n];
-        counter = 0;
-        
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                array[i][j] = calculate(i, j, n);
-                System.out.print(" " + array[i][j] + " ");
-                if (array[i][j] > 0) {
-                    counter++;
-                }
-            }
-            System.out.println("");
-        }
-        System.out.println("Кол-во положительных элементов = " + counter);
-    }
-    public static double calculate (int i, int j, int n){
-        double result;
-        double num;
-        double dem;
-        
-        num = Math.pow(i, 2) - Math.pow(j, 2);
-        dem = (double)n;
-        
-        result = Math.sin(num / dem);
-        return result;
-    }
+	public static void main(String[] args) {
+		int n;
+		double[][] array;
+		int counter;
+
+		n = 8;
+		array = new double[n][n];
+		counter = 0;
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				array[i][j] = calculate(i, j, n);
+				System.out.print(" " + array[i][j] + " ");
+				if (array[i][j] > 0) {
+					counter++;
+				}
+			}
+			System.out.println("");
+		}
+		System.out.println("Кол-во положительных элементов = " + counter);
+	}
+
+	public static double calculate(int i, int j, int n) {
+		double result;
+		double num;
+		double dem;
+
+		num = Math.pow(i, 2) - Math.pow(j, 2);
+		dem = (double) n;
+
+		result = Math.sin(num / dem);
+		return result;
+	}
 }

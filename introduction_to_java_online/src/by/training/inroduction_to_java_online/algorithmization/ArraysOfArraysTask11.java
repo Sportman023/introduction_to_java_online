@@ -17,55 +17,54 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Матрицу 10x20 заполнить случайными числами от 0 до 15.
- * Вывести на экран саму матрицу и номера строк, в которых число 5 встречается
- * три и более раз.
+ * Задание: Матрицу 10x20 заполнить случайными числами от 0 до 15. Вывести на
+ * экран саму матрицу и номера строк, в которых число 5 встречается три и более
+ * раз.
  * 
  * @author Vadim Ortman
  */
 
 public class ArraysOfArraysTask11 {
-    public static void main(String[] args) {
-        int[][] array;
-        int numberOfRows;
-        int numberOfColumns;
-        
-        
-        numberOfRows = 10;
-        numberOfColumns = 20;
-        array = new int[numberOfRows][numberOfColumns];
-        
-        for (int row = 0; row < numberOfRows; row++) {
-            if (row < 9) {
-                System.out.print(" " + (row + 1) + "| ");
-            } else {
-                System.out.print((row + 1) + "| ");
-            }
-            
-            for (int column = 0; column < numberOfColumns; column++) {
-                array[row][column] = (int)(Math.random() * 16);
-                if (array[row][column] < 10) {
-                    System.out.print(" " + array[row][column] + " ");
-                } else {
-                    System.out.print(array[row][column] + " ");
-                }
-            }
-            System.out.println("");
-        }
-        
-        System.out.print("Строки в которых 5 встречается 3 и более раз:");
-        for (int row = 0; row < numberOfRows; row++) {
-            int fivesCounter;
-            fivesCounter = 0;
-            for (int column = 0; column < numberOfColumns; column++) {
-                    if (array[row][column] == 5) {
-                        fivesCounter++;
-                    }
-            }
-            if (fivesCounter >= 3) {
-                System.out.print(" " + (row + 1));
-            }
-        }
-        System.out.println("");
-    }
+	public static void main(String[] args) {
+		int[][] array;
+		int numberOfRows;
+		int numberOfColumns;
+
+		numberOfRows = 10;
+		numberOfColumns = 20;
+		array = new int[numberOfRows][numberOfColumns];
+
+		for (int row = 0; row < numberOfRows; row++) {
+			if (row < 9) {
+				System.out.print(" " + (row + 1) + "| ");
+			} else {
+				System.out.print((row + 1) + "| ");
+			}
+
+			for (int column = 0; column < numberOfColumns; column++) {
+				array[row][column] = (int) (Math.random() * 16);
+				if (array[row][column] < 10) {
+					System.out.print(" " + array[row][column] + " ");
+				} else {
+					System.out.print(array[row][column] + " ");
+				}
+			}
+			System.out.println("");
+		}
+
+		System.out.print("Строки в которых 5 встречается 3 и более раз:");
+		for (int row = 0; row < numberOfRows; row++) {
+			int fivesCounter;
+			fivesCounter = 0;
+			for (int column = 0; column < numberOfColumns; column++) {
+				if (array[row][column] == 5) {
+					fivesCounter++;
+				}
+			}
+			if (fivesCounter >= 3) {
+				System.out.print(" " + (row + 1));
+			}
+		}
+		System.out.println("");
+	}
 }

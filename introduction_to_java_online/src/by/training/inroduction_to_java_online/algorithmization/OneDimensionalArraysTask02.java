@@ -18,31 +18,31 @@ package by.training.inroduction_to_java_online.algorithmization;
 
 /**
  * Задание: Дана последовательность действительных чисел а1 ,а2 ,..., ап.
- * Заменить все ее члены, большие данного Z, этим числом.
- * Подсчитать количество замен.
+ * Заменить все ее члены, большие данного Z, этим числом. Подсчитать количество
+ * замен.
  * 
  * @author Vadim Ortman
  */
 public class OneDimensionalArraysTask02 {
-    public static void main(String[] args) {
-        double[] array;
-        double z;
-        int replaseCounter;
-        
-        array = new double [100];
-        z = 3.5;
-        replaseCounter = 0;
-        
-        for (int i = 0; i < 100; i++){
-            array[i] = Math.random() * 10;
-        }
-        
-        for (int i = 0; i < 100; i++) {
-            if (array[i] > z) {
-                array[i] = z;
-                replaseCounter ++;
-            }
-        }
-        System.out.println("Кол-во замен = " + replaseCounter);
-    }
+	public static void main(String[] args) {
+		double[] array;
+		double z;
+		int replaseCounter;
+
+		array = new double[100];
+		z = 3.5;
+		replaseCounter = 0;
+
+		for (int i = 0; i < 100; i++) {
+			array[i] = Math.random() * 10;
+		}
+
+		for (int i = 0; i < 100; i++) {
+			if (array[i] > z) {
+				array[i] = z;
+				replaseCounter++;
+			}
+		}
+		System.out.println("Кол-во замен = " + replaseCounter);
+	}
 }

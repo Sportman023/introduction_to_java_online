@@ -17,142 +17,139 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Даны дроби p1/q1, p2/q2 ... pn/qn (pi, qi - натуральные).
- * Составить программу, которая приводит эти дроби к общему знаменателю
- * и упорядочивает их в порядке возрастания.
+ * Задание: Даны дроби p1/q1, p2/q2 ... pn/qn (pi, qi - натуральные). Составить
+ * программу, которая приводит эти дроби к общему знаменателю и упорядочивает их
+ * в порядке возрастания.
  * 
  * @author Vadim Ortman
  */
 public class OneDimensionalArraysSortingTask08 {
-    public static void main(String[] args) {
-        int[] numeratorArr;
-        int[] denominatorArr;
-        int length;
-        
-        length = 10;
-        numeratorArr = new int[length];
-        denominatorArr = new int[length];
-        
-        for (int i = 0; i < length; i++) {
-            numeratorArr[i] = (int)(Math.random() * 10) + 1;
-            denominatorArr[i] = (int)(Math.random() * 10) + 1;
-        }
-        System.out.println("Original arrays:");
-        printNumericArray(numeratorArr, denominatorArr);
-        printStringArray(numeratorArr, denominatorArr);
-        printNumericArray(denominatorArr, numeratorArr);
-        System.out.println("");
-        
-        for (int i = 0; i < length - 1; i++) {
-            if (i < 0) {
-                i = 0;
-            }
-            if (denominatorArr[i] == denominatorArr[i + 1]) {
-                
-            } else if (denominatorArr[i] % denominatorArr[i + 1] == 0) {
-                numeratorArr[i + 1] = numeratorArr[i + 1] 
-                        * (denominatorArr[i]/ denominatorArr[i + 1]);
-                denominatorArr[i + 1] = denominatorArr[i];
-                i = i - 2;
-            } else if (denominatorArr[i + 1] % denominatorArr[i] == 0) {
-                numeratorArr[i] = numeratorArr[i] 
-                        * (denominatorArr[i + 1] / denominatorArr[i]);
-                denominatorArr[i] = denominatorArr[i + 1];
-                i = i - 2;
-            } else {
-                for (int j = 2; j * denominatorArr[i] 
-                        <= denominatorArr[i] * denominatorArr[i + 1]; j++) {
-                    if (denominatorArr[i] * j % denominatorArr[i + 1] == 0) {
-                        numeratorArr[i] = numeratorArr[i] * j;
-                        denominatorArr[i] = denominatorArr[i] * j;
-                        
-                        numeratorArr[i + 1] = numeratorArr[i + 1] 
-                                * (denominatorArr[i] / denominatorArr[i + 1]);
-                        denominatorArr[i + 1] = denominatorArr[i + 1] 
-                                * (denominatorArr[i] / denominatorArr[i + 1]);
-                        i = i - 2;
-                        break;
-                    }
-                }
-            }
-        }
-        System.out.println("Reduced to a common denominator arrays");
-        printNumericArray(numeratorArr, denominatorArr);
-        printStringArray(numeratorArr, denominatorArr);
-        printNumericArray(denominatorArr, numeratorArr);
-        System.out.println("\nSorted arrays");
-        sortingArr(numeratorArr, denominatorArr);
-    }
-    
-    static void printNumericArray(int[] arrayPrint1, int[] arrayPrint2){
-        int arrayLength;
-        arrayLength = arrayPrint1.length;
+	public static void main(String[] args) {
+		int[] numeratorArr;
+		int[] denominatorArr;
+		int length;
 
-        for (int i = 0; i < arrayLength; i++) {
-            int len1;
-            int len2;
-            len1 = 0;
-            len2 = 0;
-            for (int j = 1; arrayPrint1[i] % j < arrayPrint1[i]; j = j * 10) {
-                len1++;
-            }
-            
-            for (int j = 1; arrayPrint2[i] % j < arrayPrint2[i]; j = j * 10) {
-                len2++;
-            }
-            
-            for (int j = 0; j < len2 - len1; j++) {
-                System.out.print(" ");
-            }
-            System.out.print(arrayPrint1[i] + " ");
-        }
-        System.out.println("");
-    }
-    static void printStringArray(int[] arrayPrint1, int[] arrayPrint2){
-        int arrayLength;
-        arrayLength = arrayPrint1.length;
+		length = 10;
+		numeratorArr = new int[length];
+		denominatorArr = new int[length];
 
-        for (int i = 0; i < arrayLength; i++) {
-            int len1;
-            int len2;
-            len1 = 0;
-            len2 = 0;
-            for (int j = 1; arrayPrint1[i] % j < arrayPrint1[i]; j = j * 10) {
-                len1++;
-            }
-            
-            for (int j = 1; arrayPrint2[i] % j < arrayPrint2[i]; j = j * 10) {
-                len2++;
-            }
-            
-            for (int j = 0; j < Math.max(len2,len1) - 1; j++) {
-                System.out.print("-");
-            }
-            System.out.print("- ");
-        }
-        System.out.println("");
-    }
-    static void sortingArr(int[] numeratorArr,int[] denominatorArr) {
-        int length;
-        
-        length = numeratorArr.length;
-        
-        for (int i = 0; i < length - 1; i++) {
-            if (i < 0) {
-                i = 0;
-            }
+		for (int i = 0; i < length; i++) {
+			numeratorArr[i] = (int) (Math.random() * 10) + 1;
+			denominatorArr[i] = (int) (Math.random() * 10) + 1;
+		}
+		System.out.println("Original arrays:");
+		printNumericArray(numeratorArr, denominatorArr);
+		printStringArray(numeratorArr, denominatorArr);
+		printNumericArray(denominatorArr, numeratorArr);
+		System.out.println("");
 
-            if (numeratorArr[i] > numeratorArr[i + 1]) {
-                int temp;
-                temp = numeratorArr[i];
-                numeratorArr[i] = numeratorArr[i + 1];
-                numeratorArr[i + 1] = temp;
-                
-                i = i - 2;
-            }
-        }
-        printNumericArray(numeratorArr, denominatorArr);
-        printStringArray(numeratorArr, denominatorArr);
-        printNumericArray(denominatorArr, numeratorArr);
-    }
+		for (int i = 0; i < length - 1; i++) {
+			if (i < 0) {
+				i = 0;
+			}
+			if (denominatorArr[i] == denominatorArr[i + 1]) {
+
+			} else if (denominatorArr[i] % denominatorArr[i + 1] == 0) {
+				numeratorArr[i + 1] = numeratorArr[i + 1] * (denominatorArr[i] / denominatorArr[i + 1]);
+				denominatorArr[i + 1] = denominatorArr[i];
+				i = i - 2;
+			} else if (denominatorArr[i + 1] % denominatorArr[i] == 0) {
+				numeratorArr[i] = numeratorArr[i] * (denominatorArr[i + 1] / denominatorArr[i]);
+				denominatorArr[i] = denominatorArr[i + 1];
+				i = i - 2;
+			} else {
+				for (int j = 2; j * denominatorArr[i] <= denominatorArr[i] * denominatorArr[i + 1]; j++) {
+					if (denominatorArr[i] * j % denominatorArr[i + 1] == 0) {
+						numeratorArr[i] = numeratorArr[i] * j;
+						denominatorArr[i] = denominatorArr[i] * j;
+
+						numeratorArr[i + 1] = numeratorArr[i + 1] * (denominatorArr[i] / denominatorArr[i + 1]);
+						denominatorArr[i + 1] = denominatorArr[i + 1] * (denominatorArr[i] / denominatorArr[i + 1]);
+						i = i - 2;
+						break;
+					}
+				}
+			}
+		}
+		System.out.println("Reduced to a common denominator arrays");
+		printNumericArray(numeratorArr, denominatorArr);
+		printStringArray(numeratorArr, denominatorArr);
+		printNumericArray(denominatorArr, numeratorArr);
+		System.out.println("\nSorted arrays");
+		sortingArr(numeratorArr, denominatorArr);
+	}
+
+	static void printNumericArray(int[] arrayPrint1, int[] arrayPrint2) {
+		int arrayLength;
+		arrayLength = arrayPrint1.length;
+
+		for (int i = 0; i < arrayLength; i++) {
+			int len1;
+			int len2;
+			len1 = 0;
+			len2 = 0;
+			for (int j = 1; arrayPrint1[i] % j < arrayPrint1[i]; j = j * 10) {
+				len1++;
+			}
+
+			for (int j = 1; arrayPrint2[i] % j < arrayPrint2[i]; j = j * 10) {
+				len2++;
+			}
+
+			for (int j = 0; j < len2 - len1; j++) {
+				System.out.print(" ");
+			}
+			System.out.print(arrayPrint1[i] + " ");
+		}
+		System.out.println("");
+	}
+
+	static void printStringArray(int[] arrayPrint1, int[] arrayPrint2) {
+		int arrayLength;
+		arrayLength = arrayPrint1.length;
+
+		for (int i = 0; i < arrayLength; i++) {
+			int len1;
+			int len2;
+			len1 = 0;
+			len2 = 0;
+			for (int j = 1; arrayPrint1[i] % j < arrayPrint1[i]; j = j * 10) {
+				len1++;
+			}
+
+			for (int j = 1; arrayPrint2[i] % j < arrayPrint2[i]; j = j * 10) {
+				len2++;
+			}
+
+			for (int j = 0; j < Math.max(len2, len1) - 1; j++) {
+				System.out.print("-");
+			}
+			System.out.print("- ");
+		}
+		System.out.println("");
+	}
+
+	static void sortingArr(int[] numeratorArr, int[] denominatorArr) {
+		int length;
+
+		length = numeratorArr.length;
+
+		for (int i = 0; i < length - 1; i++) {
+			if (i < 0) {
+				i = 0;
+			}
+
+			if (numeratorArr[i] > numeratorArr[i + 1]) {
+				int temp;
+				temp = numeratorArr[i];
+				numeratorArr[i] = numeratorArr[i + 1];
+				numeratorArr[i + 1] = temp;
+
+				i = i - 2;
+			}
+		}
+		printNumericArray(numeratorArr, denominatorArr);
+		printStringArray(numeratorArr, denominatorArr);
+		printNumericArray(denominatorArr, numeratorArr);
+	}
 }

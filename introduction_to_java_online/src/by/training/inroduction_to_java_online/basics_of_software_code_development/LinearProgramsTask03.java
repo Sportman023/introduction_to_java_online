@@ -15,27 +15,24 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Вычислить значение выражения по формуле (все переменные принимают 
- * действительные значения):
- * ((Math.sin(a) + Math.cos(b)) / (Math.cos(a) - Math.sin(b))) * Math.tan(a * b)
+ * Задание: Вычислить значение выражения по формуле (все переменные принимают
+ * действительные значения): ((Math.sin(a) + Math.cos(b)) / (Math.cos(a) -
+ * Math.sin(b))) * Math.tan(a * b)
  * 
  * @version
- * @author Vadim Ortman 
+ * @author Vadim Ortman
  */
-public class LinearProgramsTask03 {    
-    public static void main (String [] args){
-        double a = 6;
-        double b = 7;
-        double z;
-        
-        z = ((Math.sin(a) + Math.cos(b)) / (Math.cos(a) - Math.sin(b)))
-                * Math.tan(a * b);
-        
-        System.out.println("При a = " + a + ", b = " + b 
-                + " значение функции z = " + z);
-    }
+public class LinearProgramsTask03 {
+	public static void main(String[] args) {
+		double a = 6;
+		double b = 7;
+		double z;
+
+		z = ((Math.sin(a) + Math.cos(b)) / (Math.cos(a) - Math.sin(b))) * Math.tan(a * b);
+
+		System.out.println("При a = " + a + ", b = " + b + " значение функции z = " + z);
+	}
 }

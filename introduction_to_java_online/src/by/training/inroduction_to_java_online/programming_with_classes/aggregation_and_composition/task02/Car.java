@@ -5,20 +5,20 @@ import java.util.ArrayList;
 public class Car {
 	private Logic logic;
 	private View view;
-	
+
 	private String model;
 	private String color;
 	private int doorsNumber;
 	Engine engine;
 	ArrayList<Wheel> wheels;
-	
+
 	{
-		engine = new Engine (this);
+		engine = new Engine(this);
 		wheels = new ArrayList<Wheel>();
 	}
-	
+
 	public Car(Logic logic, View view) {
-		
+
 	}
 
 	public Logic getLogic() {
@@ -76,5 +76,5 @@ public class Car {
 	public void setWheels(ArrayList<Wheel> wheels) {
 		this.wheels = wheels;
 	}
-	
+
 }

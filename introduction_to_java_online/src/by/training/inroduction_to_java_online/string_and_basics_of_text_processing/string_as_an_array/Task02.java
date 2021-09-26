@@ -15,33 +15,33 @@ public class Task02 {
 		byte[] byteArrayOfString;
 		byte[] byteArrayOfWord;
 		byte[] byteArrayOfLetter;
-		
+
 		byteArrayOfString = string.getBytes();
 		byteArrayOfWord = word.getBytes();
 		byteArrayOfLetter = letter.getBytes();
-		
-		for(int i = 0; i < byteArrayOfString.length - byteArrayOfWord.length - 1; i++) {
-			if(byteArrayOfString[i] == byteArrayOfWord[0]) {
+
+		for (int i = 0; i < byteArrayOfString.length - byteArrayOfWord.length - 1; i++) {
+			if (byteArrayOfString[i] == byteArrayOfWord[0]) {
 				boolean isNeededWord = true;
-				for(int j = 0; j < word.length(); j++) {
-					if(byteArrayOfString[i + j] != byteArrayOfWord[j]) {
+				for (int j = 0; j < word.length(); j++) {
+					if (byteArrayOfString[i + j] != byteArrayOfWord[j]) {
 						isNeededWord = false;
 					}
 				}
-				if(isNeededWord) {
+				if (isNeededWord) {
 					byte[] tempArr;
 					int tempArrLength;
 					tempArrLength = byteArrayOfString.length + letter.length() - word.length();
 					tempArr = new byte[tempArrLength];
 
 					int offsetTempArr = 0;
-					
-					for(int j = 0; j < byteArrayOfString.length; j++) {
-						if(j == i) {
-							for(int k = 0; k < letter.length(); k++) {
-								tempArr[j + k] =  byteArrayOfLetter[k];
+
+					for (int j = 0; j < byteArrayOfString.length; j++) {
+						if (j == i) {
+							for (int k = 0; k < letter.length(); k++) {
+								tempArr[j + k] = byteArrayOfLetter[k];
 							}
-							
+
 							offsetTempArr = letter.length() - word.length();
 							j = j + word.length() - 1;
 						} else {
@@ -50,7 +50,7 @@ public class Task02 {
 					}
 					byteArrayOfString = tempArr;
 					i = i + offsetTempArr;
-				}	
+				}
 			}
 		}
 		string = new String(byteArrayOfString);

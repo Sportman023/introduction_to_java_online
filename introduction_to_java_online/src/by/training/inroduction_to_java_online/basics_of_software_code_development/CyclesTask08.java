@@ -16,52 +16,55 @@
  */
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
-import java.util.*;
+import java.util.ArrayList;
+
 /**
- * Задание: Даны два числа. Определить цифры, входящие в запись как первого
- * так и второго числа.
+ * Задание: Даны два числа. Определить цифры, входящие в запись как первого так
+ * и второго числа.
  * 
- * @version 
+ * @version
  * @author Vadim Ortman
  */
 public class CyclesTask08 {
-    public static void main(String[] args) {
-        double a = 123.044012D;
-        String aStr;
-        double b = 42D;
-        String bStr;
-        ArrayList <Character> numList = new ArrayList <Character>();
-        
-        if (a % 1 == 0){
-            aStr = Integer.toString((int)a); /** чтобы не учитвать ноль если 
-                                                    число целое (1.0) */
-        } else {
-            aStr = Double.toString(a);
-        }
+	public static void main(String[] args) {
+		double a = 123.044012D;
+		String aStr;
+		double b = 42D;
+		String bStr;
+		ArrayList<Character> numList = new ArrayList<Character>();
 
-        if (b % 1 == 0){
-            bStr = Integer.toString((int)b); /** чтобы не учитвать ноль если 
-                                                    число целое (1.0) */   
-        } else {
-            bStr = Double.toString(b);
-        }
-        
-        for (int i = 0; i < aStr.length(); i++){
-            char aChr;
-            aChr = aStr.charAt(i);
-                    
-            if (!numList.contains(aChr)){
-                numList.add(aChr);
-            }    
-        }
-        
-        for (Character i : numList) {
-            for (int j = 0; j < bStr.length(); j++) {
-                if (i.equals(bStr.charAt(j)) && i != '.'){
-                    System.out.println(i);
-                    break;
-                }
-            }
-        }
-    }        
+		if (a % 1 == 0) {
+			aStr = Integer.toString((int) a); /**
+												 * чтобы не учитвать ноль если число целое (1.0)
+												 */
+		} else {
+			aStr = Double.toString(a);
+		}
+
+		if (b % 1 == 0) {
+			bStr = Integer.toString((int) b); /**
+												 * чтобы не учитвать ноль если число целое (1.0)
+												 */
+		} else {
+			bStr = Double.toString(b);
+		}
+
+		for (int i = 0; i < aStr.length(); i++) {
+			char aChr;
+			aChr = aStr.charAt(i);
+
+			if (!numList.contains(aChr)) {
+				numList.add(aChr);
+			}
+		}
+
+		for (Character i : numList) {
+			for (int j = 0; j < bStr.length(); j++) {
+				if (i.equals(bStr.charAt(j)) && i != '.') {
+					System.out.println(i);
+					break;
+				}
+			}
+		}
+	}
 }

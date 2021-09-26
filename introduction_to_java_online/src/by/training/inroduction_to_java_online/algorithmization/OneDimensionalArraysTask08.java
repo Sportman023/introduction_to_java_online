@@ -17,49 +17,49 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Дана последовательность целых чисел a1, a2,...,an.
- * Образовать новую последовательность, выбросив из исходной те члены,
- * которые равны min( a1, a2,..., an).
+ * Задание: Дана последовательность целых чисел a1, a2,...,an. Образовать новую
+ * последовательность, выбросив из исходной те члены, которые равны min( a1,
+ * a2,..., an).
  * 
  * @author Vadim Ortman
  */
 
 public class OneDimensionalArraysTask08 {
-    public static void main(String[] args) {
-        int[] array0;
-        int[] array1;
-        int sizeOfArray0;
-        int sizeOfArray1;
-        int minOfArray0;
-        int minCounter;
+	public static void main(String[] args) {
+		int[] array0;
+		int[] array1;
+		int sizeOfArray0;
+		int sizeOfArray1;
+		int minOfArray0;
+		int minCounter;
 
-        sizeOfArray0 = 5;
-        array0 = new int[sizeOfArray0];
+		sizeOfArray0 = 5;
+		array0 = new int[sizeOfArray0];
 
-        for (int i = 0; i < sizeOfArray0; i++) {
-            array0[i] = (int) (Math.random() * 10);
-        }
+		for (int i = 0; i < sizeOfArray0; i++) {
+			array0[i] = (int) (Math.random() * 10);
+		}
 
-        minOfArray0= array0[0];
-        minCounter = 0;
+		minOfArray0 = array0[0];
+		minCounter = 0;
 
-        for (int i = 0; i < sizeOfArray0; i++) {
-            if (array0[i] < minOfArray0) {
-                minOfArray0 = array0[i];
-                minCounter = 1;
-            } else if (array0[i] == minOfArray0) {
-                minCounter++;
-            }
-        }
+		for (int i = 0; i < sizeOfArray0; i++) {
+			if (array0[i] < minOfArray0) {
+				minOfArray0 = array0[i];
+				minCounter = 1;
+			} else if (array0[i] == minOfArray0) {
+				minCounter++;
+			}
+		}
 
-        sizeOfArray1 = sizeOfArray0 - minCounter;
-        array1 = new int[sizeOfArray1];
+		sizeOfArray1 = sizeOfArray0 - minCounter;
+		array1 = new int[sizeOfArray1];
 
-        for (int i = 0, j = 0; i < sizeOfArray0; i++) {
-            if (array0[i] != minOfArray0) {
-                array1[j] = array0[i];
-                j++;
-            }
-        }
-    }    
+		for (int i = 0, j = 0; i < sizeOfArray0; i++) {
+			if (array0[i] != minOfArray0) {
+				array1[j] = array0[i];
+				j++;
+			}
+		}
+	}
 }

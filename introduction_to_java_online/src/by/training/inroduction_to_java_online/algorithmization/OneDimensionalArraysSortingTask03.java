@@ -17,33 +17,31 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Сортировка выбором.
- * Дана последовательность чисел a1 меньше либо равно a2 меньше либо равно ... 
- * меньше либо равно an.
- * Требуется переставить элементы так, чтобы они были расположены по убыванию.
- * Для этого в массиве, начиная с первого, выбирается наибольший элемент 
- * и ставится на первое место, а первый - на место наибольшего.
- * Затем, начиная со второго, эта процедура повторяется.
- * Написать алгоритм сортировки выбором.
+ * Задание: Сортировка выбором. Дана последовательность чисел a1 меньше либо
+ * равно a2 меньше либо равно ... меньше либо равно an. Требуется переставить
+ * элементы так, чтобы они были расположены по убыванию. Для этого в массиве,
+ * начиная с первого, выбирается наибольший элемент и ставится на первое место,
+ * а первый - на место наибольшего. Затем, начиная со второго, эта процедура
+ * повторяется. Написать алгоритм сортировки выбором.
  * 
  * @author Vadim Ortman
  */
 public class OneDimensionalArraysSortingTask03 {
-    public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int arrayLength;
-        
-        arrayLength = array.length;
-        
-        for (int i = 0; i < arrayLength / 2; i++) {
-            int temp;
-            temp = array[i];
-            array[i] = array[arrayLength - 1 - i];
-            array[arrayLength - 1 - i] = temp;
-        }
-        
-       for (int i = 0; i < arrayLength; i++) {
-            System.out.print(array[i] + ", ");
-        }
-    }
+	public static void main(String[] args) {
+		int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		int arrayLength;
+
+		arrayLength = array.length;
+
+		for (int i = 0; i < arrayLength / 2; i++) {
+			int temp;
+			temp = array[i];
+			array[i] = array[arrayLength - 1 - i];
+			array[arrayLength - 1 - i] = temp;
+		}
+
+		for (int i = 0; i < arrayLength; i++) {
+			System.out.print(array[i] + ", ");
+		}
+	}
 }

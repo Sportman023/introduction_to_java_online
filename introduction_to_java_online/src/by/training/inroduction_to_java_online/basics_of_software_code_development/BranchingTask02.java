@@ -15,29 +15,28 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
  * Задание: Найти max{min(a,b),min(a,b)}
  * 
  * @version
- * @author Vadim Ortman 
+ * @author Vadim Ortman
  */
 public class BranchingTask02 {
-    public static void main (String [] args){
-        int a;
-        int b;
-        int c;
-        int d;
-        int result;
-        
-        a = 9;
-        b = 5;
-        c = 1;
-        d = 7;
-        result = Math.max(Math.min(a, b), Math.min(c, d));
-        
-        System.out.println("max{min(a,b),min(a,b)} = " + result);
-    }
+	public static void main(String[] args) {
+		int a;
+		int b;
+		int c;
+		int d;
+		int result;
+
+		a = 9;
+		b = 5;
+		c = 1;
+		d = 7;
+		result = Math.max(Math.min(a, b), Math.min(c, d));
+
+		System.out.println("max{min(a,b),min(a,b)} = " + result);
+	}
 }

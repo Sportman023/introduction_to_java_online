@@ -27,32 +27,32 @@ package by.training.inroduction_to_java_online.algorithmization;
  * @author Vadim Ortman
  */
 public class OneDimensionalArraysSortingTask04 {
-    public static void main(String[] args) {
-        int[] array;
-        array = new int [10];
-        int swapNumbers;
-        
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 10);
-            System.out.print(array[i] + ",");
-        }
-        System.out.println("");
-        
-        do {
-            swapNumbers = 0;
-            for (int i = 0; i < array.length - 1; i++) {
-                int temp;
-                if (array[i] > array[i + 1]) {
-                    temp = array[i];
-                    array[i] = array[i + 1];
-                    array[i + 1] = temp;
-                    swapNumbers++;
-                }
-            }
-        } while (swapNumbers > 0);
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + ",");
-        }
-        
-    }
+	public static void main(String[] args) {
+		int[] array;
+		array = new int[10];
+		int swapNumbers;
+
+		for (int i = 0; i < array.length; i++) {
+			array[i] = (int) (Math.random() * 10);
+			System.out.print(array[i] + ",");
+		}
+		System.out.println("");
+
+		do {
+			swapNumbers = 0;
+			for (int i = 0; i < array.length - 1; i++) {
+				int temp;
+				if (array[i] > array[i + 1]) {
+					temp = array[i];
+					array[i] = array[i + 1];
+					array[i + 1] = temp;
+					swapNumbers++;
+				}
+			}
+		} while (swapNumbers > 0);
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + ",");
+		}
+
+	}
 }

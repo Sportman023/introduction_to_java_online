@@ -17,34 +17,33 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Дан целочисленный массив с количеством элементов п.
- * Сжать массив, выбросив из него каждый второй элемент
- * (освободившиеся элементы заполнить нулями).
- * Примечание: Дополнительный массив не использовать.
+ * Задание: Дан целочисленный массив с количеством элементов п. Сжать массив,
+ * выбросив из него каждый второй элемент (освободившиеся элементы заполнить
+ * нулями). Примечание: Дополнительный массив не использовать.
  * 
  * @author Vadim Ortman
  */
 
 public class OneDimensionalArraysTask10 {
-    public static void main(String[] args) {
-        int[] array;
-        int n;
-        
-        n = 9;
-        array = new int[n];
-        
-        for (int i = 0; i < n; i++) {
-            array[i] = (int)(Math.random() * 10);
-            System.out.print(array[i] + ", ");
-        }
-        System.out.println("");
-        for (int i = 0; i < n; i++) {
-            if ((i * 2) < n) {
-                array[i] = array[i * 2];
-            } else {
-                array[i] = 0;
-            }
-        System.out.print(array[i] + ", ");
-        }
-    }
+	public static void main(String[] args) {
+		int[] array;
+		int n;
+
+		n = 9;
+		array = new int[n];
+
+		for (int i = 0; i < n; i++) {
+			array[i] = (int) (Math.random() * 10);
+			System.out.print(array[i] + ", ");
+		}
+		System.out.println("");
+		for (int i = 0; i < n; i++) {
+			if ((i * 2) < n) {
+				array[i] = array[i * 2];
+			} else {
+				array[i] = 0;
+			}
+			System.out.print(array[i] + ", ");
+		}
+	}
 }

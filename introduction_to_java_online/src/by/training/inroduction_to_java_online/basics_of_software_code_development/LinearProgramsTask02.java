@@ -15,28 +15,25 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Вычислить значение выражения по формуле (все переменные принимают 
- * действительные значения):
- * (b + Math.sqrt(b * b + 4 * a * c)) / (2 * a) - Math.pow(a, 3) + Math.pow(b,-2)
+ * Задание: Вычислить значение выражения по формуле (все переменные принимают
+ * действительные значения): (b + Math.sqrt(b * b + 4 * a * c)) / (2 * a) -
+ * Math.pow(a, 3) + Math.pow(b,-2)
  * 
  * @version
- * @author Vadim Ortman 
+ * @author Vadim Ortman
  */
 public class LinearProgramsTask02 {
-    public static void main (String [] args){
-        double a = 6;
-        double b = 7;
-        double c = 12;        
-        double z;
-              
-        z = (b + Math.sqrt(b * b + 4 * a * c)) / (2 * a) - Math.pow(a, 3)
-                + Math.pow(b,-2);
-              
-        System.out.println("При a = " + a + ", b = " + b + " и c = " + c 
-                + " значение функции z = " + z);
-    }
+	public static void main(String[] args) {
+		double a = 6;
+		double b = 7;
+		double c = 12;
+		double z;
+
+		z = (b + Math.sqrt(b * b + 4 * a * c)) / (2 * a) - Math.pow(a, 3) + Math.pow(b, -2);
+
+		System.out.println("При a = " + a + ", b = " + b + " и c = " + c + " значение функции z = " + z);
+	}
 }

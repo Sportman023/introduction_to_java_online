@@ -15,36 +15,35 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Даны три точки A(x1,y1), B(x2,y2) и C(x3,y3).
- * Определить, будут ли они расположены на одной прямой.
+ * Задание: Даны три точки A(x1,y1), B(x2,y2) и C(x3,y3). Определить, будут ли
+ * они расположены на одной прямой.
  * 
  * @version
- * @author Vadim Ortman 
+ * @author Vadim Ortman
  */
 public class BranchingTask03 {
-    public static void main (String [] args){
-        double x1;
-        double y1;
-        double x2;
-        double y2;
-        double x3;
-        double y3;
-        
-        x1 = -2;
-        y1 = 2;
-        x2 = -6;
-        y2 = 0;
-        x3 = -2;
-        y3 = 2;
-        
-        if (((y1 - y2) * (x1 - x3) - (y1 - y3) * (x1 - x2)) <= 1e-9){
-            System.out.println("Yes");    
-        } else {
-            System.out.println("No");
-        }
-    }
+	public static void main(String[] args) {
+		double x1;
+		double y1;
+		double x2;
+		double y2;
+		double x3;
+		double y3;
+
+		x1 = -2;
+		y1 = 2;
+		x2 = -6;
+		y2 = 0;
+		x3 = -2;
+		y3 = 2;
+
+		if (((y1 - y2) * (x1 - x3) - (y1 - y3) * (x1 - x2)) <= 1e-9) {
+			System.out.println("Yes");
+		} else {
+			System.out.println("No");
+		}
+	}
 }

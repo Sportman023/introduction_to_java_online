@@ -15,28 +15,27 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Дано действительное число R вида nnn.ddd.
- * Поменять местами дробную и цедую части числа.
+ * Задание: Дано действительное число R вида nnn.ddd. Поменять местами дробную и
+ * цедую части числа.
  * 
  * @version
- * @author Vadim Ortman 
+ * @author Vadim Ortman
  */
 public class LinearProgramsTask04 {
-    public static void main (String [] args){
-        double nnnddd;
-        int nnn;
-        double ddd;
-        double dddnnn;
-        
-        nnnddd = 123.456;
-        nnn = (int) nnnddd;
-        ddd = nnnddd - nnn;
-        dddnnn = Math.round(ddd * 1000) + nnn / 1000;
-        
-        System.out.println("nnn.ddd: " + nnnddd + "; ddd.nnn " + dddnnn);
-    }
+	public static void main(String[] args) {
+		double nnnddd;
+		int nnn;
+		double ddd;
+		double dddnnn;
+
+		nnnddd = 123.456;
+		nnn = (int) nnnddd;
+		ddd = nnnddd - nnn;
+		dddnnn = Math.round(ddd * 1000) + nnn / 1000;
+
+		System.out.println("nnn.ddd: " + nnnddd + "; ddd.nnn " + dddnnn);
+	}
 }

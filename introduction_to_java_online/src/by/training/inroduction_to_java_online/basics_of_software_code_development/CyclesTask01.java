@@ -15,34 +15,32 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
  * Задание: Просумировать все числа от 1 до предложенного числа.
  * 
  * @version
- * @author Vadim Ortman 
+ * @author Vadim Ortman
  */
 public class CyclesTask01 {
-    public static void main (String [] args){
-        int toNumber = 2000;
-        int result = 0;
-        boolean variableIsOverflowed = false;
-        
-        for (int i = 1; i <= toNumber; i++){
-            if ((result + i) < result){
-                System.out.println("I can't finish the calculation because "
-                        + "variable is overflowed!");
-                variableIsOverflowed = true;
-                break;
-            }
-            result += i;
-        }
-        
-        if (!variableIsOverflowed){
-            System.out.println("Sum of all numbers from 1 to " + String.format("%,d", toNumber) 
-                    + " is " + String.format("%,d", result));
-        }
-    }
+	public static void main(String[] args) {
+		int toNumber = 2000;
+		int result = 0;
+		boolean variableIsOverflowed = false;
+
+		for (int i = 1; i <= toNumber; i++) {
+			if ((result + i) < result) {
+				System.out.println("I can't finish the calculation because " + "variable is overflowed!");
+				variableIsOverflowed = true;
+				break;
+			}
+			result += i;
+		}
+
+		if (!variableIsOverflowed) {
+			System.out.println("Sum of all numbers from 1 to " + String.format("%,d", toNumber) + " is "
+					+ String.format("%,d", result));
+		}
+	}
 }

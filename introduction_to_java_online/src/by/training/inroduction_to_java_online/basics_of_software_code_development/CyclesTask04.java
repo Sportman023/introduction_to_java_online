@@ -15,33 +15,30 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Составить программу нахождения произведения квадратов
- * первых двухсот чисел.
+ * Задание: Составить программу нахождения произведения квадратов первых двухсот
+ * чисел.
  * 
  * @version
- * @author Vadim Ortman 
+ * @author Vadim Ortman
  */
 public class CyclesTask04 {
-    public static void main (String [] args){
-        long result = 1;
-        boolean variableIsOverflowed = false;
-        
-        for (int i = 1; i <= 200; i++){
-            if ((result * (long) Math.pow(i,2)) < result){
-                System.out.println("I can't finish the calculation because "
-                        + "variable is overflowed!");
-                variableIsOverflowed = true;
-                break;
-            }
-            result *= Math.pow(i, 2);
-        }
-        if (!variableIsOverflowed){
-            System.out.println(String.format("Произведение квадратов первых 200"
-                    + " чисел = %,d", result));
-        }
-    }
+	public static void main(String[] args) {
+		long result = 1;
+		boolean variableIsOverflowed = false;
+
+		for (int i = 1; i <= 200; i++) {
+			if ((result * (long) Math.pow(i, 2)) < result) {
+				System.out.println("I can't finish the calculation because " + "variable is overflowed!");
+				variableIsOverflowed = true;
+				break;
+			}
+			result *= Math.pow(i, 2);
+		}
+		if (!variableIsOverflowed) {
+			System.out.println(String.format("Произведение квадратов первых 200" + " чисел = %,d", result));
+		}
+	}
 }

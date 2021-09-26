@@ -17,45 +17,46 @@
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 import java.util.Scanner;
+
 /**
- * Задание: Для каждого натурального числа в промежутке от m до n 
- * вывести все делители, кроме единицы и самого числа.
- * m и n вводятся с клавиатуры.
+ * Задание: Для каждого натурального числа в промежутке от m до n вывести все
+ * делители, кроме единицы и самого числа. m и n вводятся с клавиатуры.
  * 
- * @version 
+ * @version
  * @author Vadim Ortman
  */
 public class CyclesTask07 {
-    public static void main(String[] args) {
-        int m;
-        int n;
-        
-        m = enterFromConsole("Введите число 1 ");
-        n = enterFromConsole("Введите число 2 ");
+	public static void main(String[] args) {
+		int m;
+		int n;
 
-        for (int i = m; i <= n; i++){
-            System.out.println("Делители для числа " + i + ":");
-            for (int j = 2; j < n; j++){
-                if ((j != 1) && (j != i) && (i%j == 0)){
-                    System.out.println(j + ";");
-                }
-            }
-        }
-    }
-            public static int enterFromConsole(String message){
-                Scanner sc;
-                
-                sc = new Scanner(System.in);
-                
-                System.out.print(message);
-                
-                while (!sc.hasNextInt()){
-                    String ln;
-                    ln = sc.nextLine();
-                    
-                    System.out.print(ln + " не целое число\n" + message);
-                }
-                
-                return sc.nextInt();
-            }
+		m = enterFromConsole("Введите число 1 ");
+		n = enterFromConsole("Введите число 2 ");
+
+		for (int i = m; i <= n; i++) {
+			System.out.println("Делители для числа " + i + ":");
+			for (int j = 2; j < n; j++) {
+				if ((j != 1) && (j != i) && (i % j == 0)) {
+					System.out.println(j + ";");
+				}
+			}
+		}
+	}
+
+	public static int enterFromConsole(String message) {
+		Scanner sc;
+
+		sc = new Scanner(System.in);
+
+		System.out.print(message);
+
+		while (!sc.hasNextInt()) {
+			String ln;
+			ln = sc.nextLine();
+
+			System.out.print(ln + " не целое число\n" + message);
+		}
+
+		return sc.nextInt();
+	}
 }

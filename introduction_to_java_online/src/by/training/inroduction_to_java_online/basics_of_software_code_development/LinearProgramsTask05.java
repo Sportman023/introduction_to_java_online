@@ -15,40 +15,37 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Дано натуральное число Т,
- * которое представляет длительность прошедшего времени в секундах.
- * Вывести данное значение длительности в часах, минутах и секундах
- * в следующей форме: ННч ММмин SSc.
+ * Задание: Дано натуральное число Т, которое представляет длительность
+ * прошедшего времени в секундах. Вывести данное значение длительности в часах,
+ * минутах и секундах в следующей форме: ННч ММмин SSc.
  * 
  * @version
- * @author Vadim Ortman 
+ * @author Vadim Ortman
  */
 public class LinearProgramsTask05 {
-    public static void main (String [] args){
-        int t;
-        int h;
-        int m;
-        int s;
-        
-        t = 9 * 3600 + 8 * 60 + 17;        
-        h = Math.round(t / 3600);
-        m = Math.round((t % 3600) / 60);
-        s = Math.round((t % 3600) % 60);
-                
-        System.out.println(addZero(h) + "ч " + addZero(m) + "м " 
-                + addZero(s) + "с");
-        }
-    
-    private static String addZero(int t){
-        String tS = t + "";
-        
-        if (t < 10){
-            tS = "0" + tS;
-        }
-    return tS;
-    }
+	public static void main(String[] args) {
+		int t;
+		int h;
+		int m;
+		int s;
+
+		t = 9 * 3600 + 8 * 60 + 17;
+		h = Math.round(t / 3600);
+		m = Math.round((t % 3600) / 60);
+		s = Math.round((t % 3600) % 60);
+
+		System.out.println(addZero(h) + "ч " + addZero(m) + "м " + addZero(s) + "с");
+	}
+
+	private static String addZero(int t) {
+		String tS = t + "";
+
+		if (t < 10) {
+			tS = "0" + tS;
+		}
+		return tS;
+	}
 }

@@ -17,46 +17,46 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Задана матрица неотрицательных чисел. Посчитать сумму элементов 
- * в каждом столбце. Определить, какой столбец содержит максимальную сумму.
+ * Задание: Задана матрица неотрицательных чисел. Посчитать сумму элементов в
+ * каждом столбце. Определить, какой столбец содержит максимальную сумму.
+ * 
  * @author Vadim Ortman
  */
 
 public class ArraysOfArraysTask09 {
-    public static void main(String[] args) {
-        int[][] array;
-        int arraySize;
-        int columnMax;
-        int max;
-        
-        arraySize = 5;
-        array = new int[arraySize][arraySize];
-        
-        for (int row = 0; row < arraySize; row++) {
-            for (int column = 0; column < arraySize; column++) {
-                array[row][column] = (int)(Math.random() * 10);
-                System.out.print(array[row][column] + " ");
-            }
-            System.out.println("");
-        }
-        
-        columnMax = -1;
-        max = -1;
-        
-        for (int column = 0; column < arraySize; column++) {
-            int columnSum;
-            columnSum = 0;
-            for (int row = 0; row < arraySize; row++) {
-                columnSum += array[row][column];
-            }
-            
-            if (columnSum > max) {
-                max = columnSum;
-                columnMax = column;
-            }
-        }
-        
-        System.out.println("Столбец №" + (columnMax + 1) + 
-                " содержит максимальную сумму (" + max + ")");
-    }
+	public static void main(String[] args) {
+		int[][] array;
+		int arraySize;
+		int columnMax;
+		int max;
+
+		arraySize = 5;
+		array = new int[arraySize][arraySize];
+
+		for (int row = 0; row < arraySize; row++) {
+			for (int column = 0; column < arraySize; column++) {
+				array[row][column] = (int) (Math.random() * 10);
+				System.out.print(array[row][column] + " ");
+			}
+			System.out.println("");
+		}
+
+		columnMax = -1;
+		max = -1;
+
+		for (int column = 0; column < arraySize; column++) {
+			int columnSum;
+			columnSum = 0;
+			for (int row = 0; row < arraySize; row++) {
+				columnSum += array[row][column];
+			}
+
+			if (columnSum > max) {
+				max = columnSum;
+				columnMax = column;
+			}
+		}
+
+		System.out.println("Столбец №" + (columnMax + 1) + " содержит максимальную сумму (" + max + ")");
+	}
 }

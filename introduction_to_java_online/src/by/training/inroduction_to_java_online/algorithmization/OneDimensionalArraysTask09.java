@@ -17,53 +17,53 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: В массиве целых чисел с количеством элементов n
- * найти наиболее часто встречающееся число.
- * Если таких чисел несколько, то определить наименьшее из них.
+ * Задание: В массиве целых чисел с количеством элементов n найти наиболее часто
+ * встречающееся число. Если таких чисел несколько, то определить наименьшее из
+ * них.
  * 
  * @author Vadim Ortman
  */
 
 public class OneDimensionalArraysTask09 {
-    public static void main(String[] args) {
-        int[] array;
-        int[] arrayCount;
-        int n;
-        int maxCount;
-        int minValue;
-        
-        n = 10;
-        array = new int[n];
+	public static void main(String[] args) {
+		int[] array;
+		int[] arrayCount;
+		int n;
+		int maxCount;
+		int minValue;
 
-        for (int i = 0; i < n; i++) {
-            array[i] = (int) (Math.random() * 10);
-            System.out.print(array[i] + ", ");
-        }
-        
-        arrayCount = new int[n];        
+		n = 10;
+		array = new int[n];
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (array[i] == array[j]) {
-                    arrayCount[i]++;
-                }
-            }
-        }
-        
-        maxCount = arrayCount[0];
-        minValue = array[0];
-        
-        for (int i = 0; i < 10; i++) {
-            if (arrayCount[i] > maxCount) {
-                maxCount = arrayCount[i];
-                minValue = array[i];
-            }else if ((arrayCount[i] == maxCount) && (array[i] < minValue)) {
-                maxCount = arrayCount[i];
-                minValue = array[i];                
-            }
-        }
-        
-        System.out.println("\n Минимальное из наиболее часто встречающихся чисел в массиве = " + minValue);
+		for (int i = 0; i < n; i++) {
+			array[i] = (int) (Math.random() * 10);
+			System.out.print(array[i] + ", ");
+		}
 
-    }
+		arrayCount = new int[n];
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if (array[i] == array[j]) {
+					arrayCount[i]++;
+				}
+			}
+		}
+
+		maxCount = arrayCount[0];
+		minValue = array[0];
+
+		for (int i = 0; i < 10; i++) {
+			if (arrayCount[i] > maxCount) {
+				maxCount = arrayCount[i];
+				minValue = array[i];
+			} else if ((arrayCount[i] == maxCount) && (array[i] < minValue)) {
+				maxCount = arrayCount[i];
+				minValue = array[i];
+			}
+		}
+
+		System.out.println("\n Минимальное из наиболее часто встречающихся чисел в массиве = " + minValue);
+
+	}
 }

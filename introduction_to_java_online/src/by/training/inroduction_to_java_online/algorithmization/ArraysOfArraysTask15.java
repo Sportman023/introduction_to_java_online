@@ -24,50 +24,50 @@ package by.training.inroduction_to_java_online.algorithmization;
  */
 
 public class ArraysOfArraysTask15 {
-    public static void main(String[] args) {
-        int[][] array;
-        int arrSz;
-        int maxVal;
-        
-        arrSz = 5;
-        array = new int[arrSz][arrSz];
-        
-        for (int row = 0; row < arrSz; row++) {
-            for (int column = 0; column < arrSz; column++) {
-                array[row][column] = (int)(Math.random() * 100);
-                
-                if (array[row][column] < 10) {
-                    System.out.print("0" + array[row][column] + " ");
-                } else {
-                    System.out.print(array[row][column] + " ");
-                }
-            }
-            System.out.println("");
-        }
-        
-        maxVal = array[0][0];
-        
-        for (int row = 0; row < arrSz; row++) {
-            for (int column = 0; column < arrSz; column++) {
-                if (maxVal < array[row][column]) {
-                    maxVal = array[row][column];
-                }
-            }
-        }
-        System.out.println("\nMax value = " + maxVal + "\n");
-        
-        for (int row = 0; row < arrSz; row++) {
-            for (int column = 0; column < arrSz; column++) {
-                if ((array[row][column] % 2) > 0) {
-                    array[row][column] = maxVal;
-                }
-                 if (array[row][column] < 10) {
-                    System.out.print("0" + array[row][column] + " ");
-                } else {
-                    System.out.print(array[row][column] + " ");
-                }
-            }
-            System.out.println("");
-        }
-    }
+	public static void main(String[] args) {
+		int[][] array;
+		int arrSz;
+		int maxVal;
+
+		arrSz = 5;
+		array = new int[arrSz][arrSz];
+
+		for (int row = 0; row < arrSz; row++) {
+			for (int column = 0; column < arrSz; column++) {
+				array[row][column] = (int) (Math.random() * 100);
+
+				if (array[row][column] < 10) {
+					System.out.print("0" + array[row][column] + " ");
+				} else {
+					System.out.print(array[row][column] + " ");
+				}
+			}
+			System.out.println("");
+		}
+
+		maxVal = array[0][0];
+
+		for (int row = 0; row < arrSz; row++) {
+			for (int column = 0; column < arrSz; column++) {
+				if (maxVal < array[row][column]) {
+					maxVal = array[row][column];
+				}
+			}
+		}
+		System.out.println("\nMax value = " + maxVal + "\n");
+
+		for (int row = 0; row < arrSz; row++) {
+			for (int column = 0; column < arrSz; column++) {
+				if ((array[row][column] % 2) > 0) {
+					array[row][column] = maxVal;
+				}
+				if (array[row][column] < 10) {
+					System.out.print("0" + array[row][column] + " ");
+				} else {
+					System.out.print(array[row][column] + " ");
+				}
+			}
+			System.out.println("");
+		}
+	}
 }

@@ -17,47 +17,43 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Сформировать квадратную матрицу порядка n 
- * по заданному образцу(n - четное):
- * 1 1 1 ... 1 1 1
- * 0 1 1 ... 1 1 0
- * 0 0 1 ... 1 0 0
- * 0 1 1 ... 1 1 0
- * 1 1 1 ... 1 1 1
+ * Задание: Сформировать квадратную матрицу порядка n по заданному образцу(n -
+ * четное): 1 1 1 ... 1 1 1 0 1 1 ... 1 1 0 0 0 1 ... 1 0 0 0 1 1 ... 1 1 0 1 1
+ * 1 ... 1 1 1
  * 
  * @author Vadim Ortman
  */
 
 public class ArraysOfArraysTask06 {
-    public static void main(String[] args) {
-        int[][] array;
-        int n;
-        
-        n = 10;
-        array = new int[n][n];
-        
-        for (int row = 0; row < n; row++) {
-            for (int column = 0; column < n; column++) {
-                if (row < n/2) {
-                    if (row > column || column >= (n - row)) {
-                        array[row][column] = 0;
-                        System.out.print("0 ");
-                    } else {               
-                        array[row][column] = 1;
-                        System.out.print("1 ");
-                    }
-                } else {
-                    if ((n - row - 1) > column || column > row) {
-                        array[row][column] = 0;
-                        System.out.print("0 ");
-                    } else {               
-                        array[row][column] = 1;
-                        System.out.print("1 ");
-                    }
-                }
-            }
-            System.out.println("");
-        }
-        
-    }
+	public static void main(String[] args) {
+		int[][] array;
+		int n;
+
+		n = 10;
+		array = new int[n][n];
+
+		for (int row = 0; row < n; row++) {
+			for (int column = 0; column < n; column++) {
+				if (row < n / 2) {
+					if (row > column || column >= (n - row)) {
+						array[row][column] = 0;
+						System.out.print("0 ");
+					} else {
+						array[row][column] = 1;
+						System.out.print("1 ");
+					}
+				} else {
+					if ((n - row - 1) > column || column > row) {
+						array[row][column] = 0;
+						System.out.print("0 ");
+					} else {
+						array[row][column] = 1;
+						System.out.print("1 ");
+					}
+				}
+			}
+			System.out.println("");
+		}
+
+	}
 }

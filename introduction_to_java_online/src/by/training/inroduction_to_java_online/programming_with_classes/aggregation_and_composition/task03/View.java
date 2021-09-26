@@ -4,26 +4,29 @@ import java.util.ArrayList;
 
 public class View {
 	public View() {
-		
+
 	}
-	
+
 	public void printCapital(Country country) {
-		System.out.println("Столица: " + country.getCountryCapitalName());
+		System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + country.getCountryCapitalName());
 	}
+
 	public void printRegionsQuantity(Country country) {
 		int regionsQuantity;
 		regionsQuantity = country.getRegions().size();
-		System.out.println("Кол-во областей: "+ regionsQuantity);
+		System.out.println("пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + regionsQuantity);
 	}
+
 	public void printRegionsCapital(Country country) {
 		ArrayList<Region> regionList;
 		regionList = country.getRegions();
-		System.out.println("Список областных городов: ");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ");
 		for (int i = 0; i < regionList.size(); i++) {
-			System.out.println((i + 1) +  ". " + regionList.get(i).getRegionCapitalName());
+			System.out.println((i + 1) + ". " + regionList.get(i).getRegionCapitalName());
 		}
 	}
+
 	public void printCountryArea(Country country) {
-		System.out.println("Площадь страны: " + country.getArea() + " м.кв.");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: " + country.getArea() + " пїЅ.пїЅпїЅ.");
 	}
 }

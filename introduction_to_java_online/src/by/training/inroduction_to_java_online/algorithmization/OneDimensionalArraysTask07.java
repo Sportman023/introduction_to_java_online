@@ -17,38 +17,38 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Даны действительные числа a1, a2,...,an.
- * Найти max(a1 + an, a2 + an-1, an + a1).
+ * Задание: Даны действительные числа a1, a2,...,an. Найти max(a1 + an, a2 +
+ * an-1, an + a1).
  * 
  * @author Vadim Ortman
  */
 
 public class OneDimensionalArraysTask07 {
-    public static void main(String[] args) {
-        double[] array;
-        int n;
-        double max;
-        int index;
-        int indexN;
-        
-        n = 9;
-        array = new double[n];
-        
-        for (int i = 0; i < n; i++) {
-            array[i] = Math.random() * 10;
-        }
-        
-        index = 0;
-        indexN = n - 1;
-        max = 0;
-        
-        while (index <= indexN) {
-            if ((array[index] + array[indexN]) > max) {
-                max = (array[index] + array[indexN]);
-            }
-            index++;
-            indexN--;
-        }
-        System.out.println("max = " + max);
-    }
+	public static void main(String[] args) {
+		double[] array;
+		int n;
+		double max;
+		int index;
+		int indexN;
+
+		n = 9;
+		array = new double[n];
+
+		for (int i = 0; i < n; i++) {
+			array[i] = Math.random() * 10;
+		}
+
+		index = 0;
+		indexN = n - 1;
+		max = 0;
+
+		while (index <= indexN) {
+			if ((array[index] + array[indexN]) > max) {
+				max = (array[index] + array[indexN]);
+			}
+			index++;
+			indexN--;
+		}
+		System.out.println("max = " + max);
+	}
 }

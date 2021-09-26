@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Sentence {
 	private ArrayList<Word> wordsList;
 	private Text text;
-	
+
 	public Sentence(Text text) {
 		this.text = text;
 		wordsList = new ArrayList<Word>();
@@ -15,12 +15,15 @@ public class Sentence {
 	public ArrayList<Word> getWordsList() {
 		return wordsList;
 	}
+
 	public void setWordsList(ArrayList<Word> wordsList) {
 		this.wordsList = wordsList;
 	}
+
 	public Text getText() {
 		return text;
 	}
+
 	public void setText(Text text) {
 		this.text = text;
 	}

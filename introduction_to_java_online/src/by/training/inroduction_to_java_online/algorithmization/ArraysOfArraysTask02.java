@@ -17,32 +17,32 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Дана квадратная матрица.
- * Вывести на экран элементы, стоящие на диагонали.
+ * Задание: Дана квадратная матрица. Вывести на экран элементы, стоящие на
+ * диагонали.
  * 
  * @author Vadim Ortman
  */
 
 public class ArraysOfArraysTask02 {
-    public static void main(String[] args) {
-        int[][] array;
-        int size;
-        
-        size = 5;
-        array = new int[size][size];
-        
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                array[i][j] = (int)(Math.random() * 10);
-                //System.out.print(array[i][j] + " ");
-            }
-            //System.out.println("");
-        }
-        
-        //System.out.println("");
-        
-        for (int i = 0; i < size; i++) {           
-            System.out.print(array[i][i] + " ");
-        }
-    }
+	public static void main(String[] args) {
+		int[][] array;
+		int size;
+
+		size = 5;
+		array = new int[size][size];
+
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				array[i][j] = (int) (Math.random() * 10);
+				// System.out.print(array[i][j] + " ");
+			}
+			// System.out.println("");
+		}
+
+		// System.out.println("");
+
+		for (int i = 0; i < size; i++) {
+			System.out.print(array[i][i] + " ");
+		}
+	}
 }

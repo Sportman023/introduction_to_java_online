@@ -4,23 +4,22 @@ import java.util.ArrayList;
 
 public class Logic {
 
-	
 	public Logic() {
-		
+
 	}
-	
+
 	public boolean readyToDrive(Car car) {
 		boolean readiness = false;
 		car.getEngine().setEngineStatus(true);
-		 if (car.getWheels().size() >= 4) {
-			 readiness = true;
-		 }
+		if (car.getWheels().size() >= 4) {
+			readiness = true;
+		}
 		return readiness;
 	}
-	
+
 	public void replaceWheel(Car car, String position) {
 		ArrayList<Wheel> wheels = car.getWheels();
-		for (int i = 0; i < wheels.size(); i ++) {
+		for (int i = 0; i < wheels.size(); i++) {
 			if (wheels.get(i).getPosition().equals(position)) {
 				wheels.remove(i);
 			}

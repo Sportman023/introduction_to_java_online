@@ -17,45 +17,45 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Даны действительные числа а1 ,а2 ,..., аn.
- * Поменять местами наибольший и наименьший элементы.
+ * Задание: Даны действительные числа а1 ,а2 ,..., аn. Поменять местами
+ * наибольший и наименьший элементы.
  * 
  * @author Vadim Ortman
  */
 
 public class OneDimensionalArraysTask04 {
-    public static void main(String[] args) {
-        double array[];
-        int n;
-        double minValue;
-        double maxValue;
-        int iMin;
-        int iMax;
+	public static void main(String[] args) {
+		double array[];
+		int n;
+		double minValue;
+		double maxValue;
+		int iMin;
+		int iMax;
 
-        n = 10;
-        array = new double[n];
-        
-        for (int i = 0; i < n; i++) {
-            array[i] = Math.random() * 1000;
-        }
+		n = 10;
+		array = new double[n];
 
-        minValue = array[0];
-        maxValue = array[0];
-        iMin = 0;
-        iMax = 0;
-        
-        for (int i = 0; i < n; i++) {
-            if (array[i] < minValue) {
-                minValue = array[i];
-                iMin = i;
-            }
-            if (array[i] > maxValue){
-                maxValue = array[i];
-                iMax = i;
-            }
-        }
+		for (int i = 0; i < n; i++) {
+			array[i] = Math.random() * 1000;
+		}
 
-        array[iMin] = maxValue;
-        array[iMax] = minValue;
-    }
+		minValue = array[0];
+		maxValue = array[0];
+		iMin = 0;
+		iMax = 0;
+
+		for (int i = 0; i < n; i++) {
+			if (array[i] < minValue) {
+				minValue = array[i];
+				iMin = i;
+			}
+			if (array[i] > maxValue) {
+				maxValue = array[i];
+				iMax = i;
+			}
+		}
+
+		array[iMin] = maxValue;
+		array[iMax] = minValue;
+	}
 }

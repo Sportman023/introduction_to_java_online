@@ -17,41 +17,38 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
- * 1   1   1 ... 1 1 1
- * 2   2   2 ... 2 2 0
- * 3   3   3 ... 3 0 0
- * n-1 n-1 0 ... 0 0 0
- * n   0   0 ... 0 0 0
+ * Задание: Сформировать квадратную матрицу порядка n по заданному образцу(n -
+ * четное): 1 1 1 ... 1 1 1 2 2 2 ... 2 2 0 3 3 3 ... 3 0 0 n-1 n-1 0 ... 0 0 0
+ * n 0 0 ... 0 0 0
  * 
  * @author Vadim Ortman
  */
 
 public class ArraysOfArraysTask05 {
-    public static void main(String[] args) {
-        int[][] array;
-        int n;
-        
-        do {
-            n = (int)(Math.random() * 10 + 1);
-        } while ((n % 2) > 0);
-        
-        System.out.println("n = " + n);
-        
-        array = new int[n][n];
-        
-        for (int row = 0; row < n; row++) {
-            for (int column = 0; column < n; column++) {
-                if ((n - column) > row) {
-                    array[row][column] = row + 1;
-                    System.out.print(array[row][column] + " ");
-                } else {
-                    array[row][column] = 0;
-                    System.out.print(array[row][column] + " ");
-                }
-            }
-            System.out.println("");
-        }
-    }
- 
+	public static void main(String[] args) {
+		int[][] array;
+		int n;
+
+		do {
+			n = (int) (Math.random() * 10 + 1);
+		} while ((n % 2) > 0);
+
+		System.out.println("n = " + n);
+
+		array = new int[n][n];
+
+		for (int row = 0; row < n; row++) {
+			for (int column = 0; column < n; column++) {
+				if ((n - column) > row) {
+					array[row][column] = row + 1;
+					System.out.print(array[row][column] + " ");
+				} else {
+					array[row][column] = 0;
+					System.out.print(array[row][column] + " ");
+				}
+			}
+			System.out.println("");
+		}
+	}
+
 }

@@ -17,44 +17,44 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Заданы два одномерных массива с различным количеством элементов
- * и натуральное число k. Объединить их в один массив, включив второй массив
- * между k-м и (k+1) - м элементами первого,
- * при этом не используя дополнительный массив.
+ * Задание: Заданы два одномерных массива с различным количеством элементов и
+ * натуральное число k. Объединить их в один массив, включив второй массив между
+ * k-м и (k+1) - м элементами первого, при этом не используя дополнительный
+ * массив.
  * 
  * @author Vadim Ortman
  */
 public class OneDimensionalArraysSortingTask01 {
-    public static void main(String[] args) {
-        int[] array1 = {1, 2, 3, 4, 5, 6};
-        int[] array2 = {9, 9, 9};
-        int[] array3;
-        int k;
-        int array1Length;
-        int array2Length;
-        int array3Length;
-        
-        array1Length =  array1.length;
-        array2Length =  array2.length;
-        array3Length = array1Length + array2Length;
-        array3 = new int[array3Length];
-        
-        k = 1;
-        int i1 = 0;
-        for (int i3 = 0; i3 < array3Length; i3++) {
-            if (i3 == k) {
-                for (int i2 = 0; i2 < array2Length; i2++) {
-                    array3[i3] = array2[i2];
-                    i3++;
-                }
-            }
-                        
-            array3[i3] = array1[i1];
-            i1++;
-        }   
-        
-        for (int i = 0; i < array3Length; i++) {
-            System.out.print(array3[i] + ", ");
-        }
-    }
+	public static void main(String[] args) {
+		int[] array1 = { 1, 2, 3, 4, 5, 6 };
+		int[] array2 = { 9, 9, 9 };
+		int[] array3;
+		int k;
+		int array1Length;
+		int array2Length;
+		int array3Length;
+
+		array1Length = array1.length;
+		array2Length = array2.length;
+		array3Length = array1Length + array2Length;
+		array3 = new int[array3Length];
+
+		k = 1;
+		int i1 = 0;
+		for (int i3 = 0; i3 < array3Length; i3++) {
+			if (i3 == k) {
+				for (int i2 = 0; i2 < array2Length; i2++) {
+					array3[i3] = array2[i2];
+					i3++;
+				}
+			}
+
+			array3[i3] = array1[i1];
+			i1++;
+		}
+
+		for (int i = 0; i < array3Length; i++) {
+			System.out.print(array3[i] + ", ");
+		}
+	}
 }

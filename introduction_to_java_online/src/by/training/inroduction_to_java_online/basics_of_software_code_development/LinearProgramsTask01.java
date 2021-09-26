@@ -15,25 +15,23 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
  * Задание: найдите значение функции: z = ((a-3)*b/2)+c
  * 
  * @version
- * @author Vadim Ortman 
+ * @author Vadim Ortman
  */
 public class LinearProgramsTask01 {
-    public static void main (String [] args){
-        double a = 2;
-        double b = 7;
-        double c = 12;        
-        double z;
-        
-        z = ((a - 3) * b / 2.0) + c;
-        
-        System.out.println("При a = " + a + ", b = " + b + " и c = " + c 
-                + " значение функции ((a-3)*b/2)+c = " + z);
-    }
+	public static void main(String[] args) {
+		double a = 2;
+		double b = 7;
+		double c = 12;
+		double z;
+
+		z = ((a - 3) * b / 2.0) + c;
+
+		System.out.println("При a = " + a + ", b = " + b + " и c = " + c + " значение функции ((a-3)*b/2)+c = " + z);
+	}
 }

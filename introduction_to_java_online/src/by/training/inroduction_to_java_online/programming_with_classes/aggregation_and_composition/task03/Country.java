@@ -9,11 +9,11 @@ public class Country {
 	private String countryCapitalName;
 	private ArrayList<Region> regions;
 	private int Area;
-	
+
 	{
 		regions = new ArrayList<Region>();
 	}
-	
+
 	public Country(Logic logic, View view) {
 		this.logic = logic;
 		this.view = view;
@@ -44,15 +44,12 @@ public class Country {
 		this.regions = regions;
 	}
 
-	
 	public int getArea() {
 		return Area;
 	}
 
-
 	public void setArea(int area) {
 		Area = area;
 	}
-	
-	
+
 }

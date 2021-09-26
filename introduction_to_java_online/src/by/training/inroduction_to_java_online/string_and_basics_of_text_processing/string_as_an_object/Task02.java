@@ -10,9 +10,9 @@ public class Task02 {
 
 	public static void main(String[] args) {
 		String string = "I want to earn 1 000 000 dollars per year.";
-		
+
 		System.out.println("Initial string: " + string);
-		
+
 		string = string.replaceAll("a", "ab");
 
 		System.out.println("String with added \"ab\" after every \"a\" : " + string);

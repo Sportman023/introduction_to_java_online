@@ -8,11 +8,11 @@ public class TouristAgency {
 	public TouristAgency() {
 		vouchers = new ArrayList<TravelVoucher>();
 	}
-	
-	
+
 	public ArrayList<TravelVoucher> getVouchers() {
 		return vouchers;
 	}
+
 	public void setVouchers(ArrayList<TravelVoucher> vouchers) {
 		this.vouchers = vouchers;
 	}

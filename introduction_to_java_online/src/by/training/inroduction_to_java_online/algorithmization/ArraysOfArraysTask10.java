@@ -23,37 +23,35 @@ package by.training.inroduction_to_java_online.algorithmization;
  */
 
 public class ArraysOfArraysTask10 {
-    public static void main(String[] args) {
-        int[][] array;
-        int arraySize;
-        
-        arraySize = 5;
-        array = new int[arraySize][arraySize];
-        
-        for (int row = 0; row < arraySize; row++) {
-            for (int column = 0; column < arraySize; column++) {
-                array[row][column] = (int)(Math.random() * 10) 
-                        - (int)(Math.random() * 10);
-                
-                if (array[row][column] >= 0) {
-                    System.out.print(" " + array[row][column] + " ");
-                } else {
-                    System.out.print(array[row][column] + " ");
-                }
-                
-                
-            }
-            System.out.println("");
-        }
-        
-        System.out.print("Положительные элементы главной диагонали:");
-        
-        for (int i = 0; i < arraySize; i++) {
-            if (array[i][i] > 0) {
-                System.out.print(" " + array[i][i]);
-            }
-        }
-        System.out.println("");
-    }
- 
+	public static void main(String[] args) {
+		int[][] array;
+		int arraySize;
+
+		arraySize = 5;
+		array = new int[arraySize][arraySize];
+
+		for (int row = 0; row < arraySize; row++) {
+			for (int column = 0; column < arraySize; column++) {
+				array[row][column] = (int) (Math.random() * 10) - (int) (Math.random() * 10);
+
+				if (array[row][column] >= 0) {
+					System.out.print(" " + array[row][column] + " ");
+				} else {
+					System.out.print(array[row][column] + " ");
+				}
+
+			}
+			System.out.println("");
+		}
+
+		System.out.print("Положительные элементы главной диагонали:");
+
+		for (int i = 0; i < arraySize; i++) {
+			if (array[i][i] > 0) {
+				System.out.print(" " + array[i][i]);
+			}
+		}
+		System.out.println("");
+	}
+
 }

@@ -13,24 +13,24 @@ public class Task04 {
 		int numbersCounter;
 		byte ASCII_Code_OF_ZERO = 48;
 		byte ASCII_CODE_OF_NINE = 57;
-		byte ASCII_CODE_OF_SEPARATOR = 46; //46 is "."
-		
+		byte ASCII_CODE_OF_SEPARATOR = 46; // 46 is "."
+
 		byteArrOfString = string.getBytes();
 		numbersCounter = 0;
-		
-		for(int i = 0; i < byteArrOfString.length; i++) {
-			if(byteArrOfString[i] >= ASCII_Code_OF_ZERO && byteArrOfString[i] <= ASCII_CODE_OF_NINE) {
+
+		for (int i = 0; i < byteArrOfString.length; i++) {
+			if (byteArrOfString[i] >= ASCII_Code_OF_ZERO && byteArrOfString[i] <= ASCII_CODE_OF_NINE) {
 				numbersCounter++;
-				
-				while (i < byteArrOfString.length && 
-						((byteArrOfString[i] >= ASCII_Code_OF_ZERO &&
-							byteArrOfString[i] <= ASCII_CODE_OF_NINE) || byteArrOfString[i] == ASCII_CODE_OF_SEPARATOR)) {
+
+				while (i < byteArrOfString.length
+						&& ((byteArrOfString[i] >= ASCII_Code_OF_ZERO && byteArrOfString[i] <= ASCII_CODE_OF_NINE)
+								|| byteArrOfString[i] == ASCII_CODE_OF_SEPARATOR)) {
 					i++;
-					
+
 				}
 			}
 		}
-		System.out.println("In the string " + "\"" + string +"\" " + numbersCounter + " digit(s).");
+		System.out.println("In the string " + "\"" + string + "\" " + numbersCounter + " digit(s).");
 
 	}
 

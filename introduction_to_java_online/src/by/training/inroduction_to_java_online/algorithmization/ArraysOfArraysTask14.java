@@ -24,46 +24,46 @@ package by.training.inroduction_to_java_online.algorithmization;
  */
 
 public class ArraysOfArraysTask14 {
-    public static void main(String[] args) {
-        int[][] array;
-        int m;
-        int n;
-        
-        m = (int)(Math.random() * 8) + 2;
-        n = (int)(Math.random() * 8) + 2;
-        
-        if (m < n) {
-            m = n;
-        }
-        
-        array = new int[m][n];
-        
-        for (int column = 0; column < n; column++) {
-            int onesCounter;
-            onesCounter = 0;
+	public static void main(String[] args) {
+		int[][] array;
+		int m;
+		int n;
 
-            for (int row = 0; row < m; row++) {
-                if (onesCounter < (column + 1)) {
-                    if ((m - row) == ((column + 1) - onesCounter)) {
-                        array[row][column] = 1;
-                        onesCounter++;
-                    } else {
-                        array[row][column] = (int)(Math.random() * 2);
+		m = (int) (Math.random() * 8) + 2;
+		n = (int) (Math.random() * 8) + 2;
 
-                        if (array[row][column] == 1) {
-                            onesCounter++;
-                        }    
-                    }
-                }
-            }    
-        }
-            
-        for (int row = 0; row < m; row++) {
-            for (int column = 0; column < n; column++) {
-                System.out.print(array[row][column] + " ");
-            }
-            System.out.println("");
-        }
-        
-    }
+		if (m < n) {
+			m = n;
+		}
+
+		array = new int[m][n];
+
+		for (int column = 0; column < n; column++) {
+			int onesCounter;
+			onesCounter = 0;
+
+			for (int row = 0; row < m; row++) {
+				if (onesCounter < (column + 1)) {
+					if ((m - row) == ((column + 1) - onesCounter)) {
+						array[row][column] = 1;
+						onesCounter++;
+					} else {
+						array[row][column] = (int) (Math.random() * 2);
+
+						if (array[row][column] == 1) {
+							onesCounter++;
+						}
+					}
+				}
+			}
+		}
+
+		for (int row = 0; row < m; row++) {
+			for (int column = 0; column < n; column++) {
+				System.out.print(array[row][column] + " ");
+			}
+			System.out.println("");
+		}
+
+	}
 }

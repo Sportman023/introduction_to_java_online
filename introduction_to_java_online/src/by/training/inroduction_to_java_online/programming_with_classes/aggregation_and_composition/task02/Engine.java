@@ -5,7 +5,7 @@ public class Engine {
 	private String fuelType;
 	private int volume;
 	private boolean engineStatus = false;
-	
+
 	public Engine(Car car) {
 		this.car = car;
 	}
@@ -41,6 +41,5 @@ public class Engine {
 	public void setEngineStatus(boolean engineStatus) {
 		this.engineStatus = engineStatus;
 	}
-	
-	
+
 }

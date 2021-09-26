@@ -15,38 +15,35 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package by.training.inroduction_to_java_online.basics_of_software_code_development;
 
 /**
- * Задание: Даны два угла треугольника (в градусах).
- * Определить, существует ли такой треугольник, и если да,
- * то будет ли он прямоугольный.
+ * Задание: Даны два угла треугольника (в градусах). Определить, существует ли
+ * такой треугольник, и если да, то будет ли он прямоугольный.
  * 
  * @version
- * @author Vadim Ortman 
+ * @author Vadim Ortman
  */
 public class BranchingTask01 {
-    public static void main (String [] args){
-        float angleA;
-        float angleB;
-        String outPut;
-        
-        angleA = 45f;
-        angleB = 90f;
-        outPut = " не существует";
-        
-        if ((angleA > 0) && (angleB > 0) && ((180 - angleA - angleB) > 0)){
-            outPut = " существует";
-            if (angleA == 90f || angleB == 90f){
-                outPut = outPut + " и он прямоугольный.";
-            } else {
-                outPut = outPut + " и он НЕ прямоугольный.";
-            }
-        }
+	public static void main(String[] args) {
+		float angleA;
+		float angleB;
+		String outPut;
 
-        System.out.println("Треугольник с углами " + angleA + " и " + angleB 
-                + outPut);
-    }
-    
+		angleA = 45f;
+		angleB = 90f;
+		outPut = " не существует";
+
+		if ((angleA > 0) && (angleB > 0) && ((180 - angleA - angleB) > 0)) {
+			outPut = " существует";
+			if (angleA == 90f || angleB == 90f) {
+				outPut = outPut + " и он прямоугольный.";
+			} else {
+				outPut = outPut + " и он НЕ прямоугольный.";
+			}
+		}
+
+		System.out.println("Треугольник с углами " + angleA + " и " + angleB + outPut);
+	}
+
 }

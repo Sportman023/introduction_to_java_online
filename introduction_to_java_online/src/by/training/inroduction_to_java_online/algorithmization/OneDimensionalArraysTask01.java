@@ -17,36 +17,36 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: В массив A [N] занесены натуральные числа. Найти сумму тех элементов, 
- * которые кратны данному К.
+ * Задание: В массив A [N] занесены натуральные числа. Найти сумму тех
+ * элементов, которые кратны данному К.
  * 
  * @author Vadim Ortman
  */
 public class OneDimensionalArraysTask01 {
-    public static void main(String[] args) {
-        int[] a;
-        int n;
-        int k;
-        int sum;
-        
-        n = 10;
-        a = new int[n];
-        k = 3;
-        sum = 0;
-        
-        for (int i = 0; i < n; i++){
-            a[i] = (int) (Math.random() * 10);
-        }
-        
-        for (int i = 0; i < n; i++){
-            if ((a[i] % k) == 0){
-                if ((sum + a[i]) < sum) {
-                    System.out.println("variable is overflowed");
-                } else {
-                    sum += a[i];
-                }
-            }
-        }
-        System.out.println("Сумма элементов кратных K = " + sum);
-    }
+	public static void main(String[] args) {
+		int[] a;
+		int n;
+		int k;
+		int sum;
+
+		n = 10;
+		a = new int[n];
+		k = 3;
+		sum = 0;
+
+		for (int i = 0; i < n; i++) {
+			a[i] = (int) (Math.random() * 10);
+		}
+
+		for (int i = 0; i < n; i++) {
+			if ((a[i] % k) == 0) {
+				if ((sum + a[i]) < sum) {
+					System.out.println("variable is overflowed");
+				} else {
+					sum += a[i];
+				}
+			}
+		}
+		System.out.println("Сумма элементов кратных K = " + sum);
+	}
 }

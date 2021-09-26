@@ -7,11 +7,11 @@ public class District {
 	private String name;
 	private String districtCapitalName;
 	private ArrayList<City> cities;
-	
+
 	{
 		cities = new ArrayList<City>();
 	}
-	
+
 	public District(Region region) {
 		this.region = region;
 	}
@@ -47,6 +47,5 @@ public class District {
 	public void setCities(ArrayList<City> cities) {
 		this.cities = cities;
 	}
-	
-	
+
 }

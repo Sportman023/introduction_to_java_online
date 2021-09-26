@@ -17,28 +17,28 @@
 package by.training.inroduction_to_java_online.algorithmization;
 
 /**
- * Задание: Даны целые числа а1 ,а2 ,..., аn.
- * Вывести на печать только те числа, для которых аi > i
+ * Задание: Даны целые числа а1 ,а2 ,..., аn. Вывести на печать только те числа,
+ * для которых аi > i
  * 
  * @author Vadim Ortman
  */
 
 public class OneDimensionalArraysTask05 {
-    public static void main(String[] args) {
-        int[] array;
-        int n;
-        
-        n = 100;
-        array = new int[n];
-        
-        for (int i = 0; i < n; i++) {
-            array[i] = (int) (Math.random() * 10) + ((int) (Math.random() * 10) * 10);
-        }
-        
-        for (int i = 0; i < n; i++) {
-            if (array[i] > i) {
-                System.out.println(array[i]);
-            }
-        }
-    }
+	public static void main(String[] args) {
+		int[] array;
+		int n;
+
+		n = 100;
+		array = new int[n];
+
+		for (int i = 0; i < n; i++) {
+			array[i] = (int) (Math.random() * 10) + ((int) (Math.random() * 10) * 10);
+		}
+
+		for (int i = 0; i < n; i++) {
+			if (array[i] > i) {
+				System.out.println(array[i]);
+			}
+		}
+	}
 }

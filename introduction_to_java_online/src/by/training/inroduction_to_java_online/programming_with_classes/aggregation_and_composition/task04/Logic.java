@@ -5,28 +5,31 @@ import java.util.Collections;
 
 public class Logic {
 	public Logic() {
-		
+
 	}
-	
+
 	public void blockAccount(Account account) {
 		account.setAvailability(false);
 	}
+
 	public void unblockAccount(Account account) {
 		account.setAvailability(true);
 	}
+
 	public Account searchAccountByNumber(Client client, String askedAccountNumber) {
 		ArrayList<Account> accounts;
 		accounts = client.getAccounts();
-		
+
 		for (int i = 0; i < accounts.size(); i++) {
 			String num;
 			num = accounts.get(i).getAccountNumber();
 			if (num.equals(askedAccountNumber)) {
-				return accounts.get(i);	
+				return accounts.get(i);
 			}
 		}
 		return null;
 	}
+
 	public void sortAccountsByName(Client client) {
 		ArrayList<Account> accounts;
 		ArrayList<Account> sortedAccountsList = new ArrayList<Account>();
@@ -44,7 +47,7 @@ public class Logic {
 		}
 		client.setAccounts(sortedAccountsList);
 	}
-	
+
 	public void generateRandomAccounts(Client client) {
 		Account account;
 		final int ACCOUNTS_QUANTITY = 5;
@@ -54,27 +57,26 @@ public class Logic {
 			account.setAccountBalance(generateAccountBalance());
 		}
 	}
-	
-	
+
 	public String generateAccountNumber() {
 		final int ACCOUNT_DIGITALS_NUMBER = 26;
 		String accountNumber = new String();
 		accountNumber = "BY";
-		
-		for(int i = 0; i <= ACCOUNT_DIGITALS_NUMBER; i++) {
-			accountNumber = accountNumber + (int)(Math.random() * 10);
+
+		for (int i = 0; i <= ACCOUNT_DIGITALS_NUMBER; i++) {
+			accountNumber = accountNumber + (int) (Math.random() * 10);
 		}
 		return accountNumber;
 	}
+
 	public int generateAccountBalance() {
 		final int MIN_BALANCE = -100_000;
 		final int MAX_BALANCE = 100_000;
 		int dif = MAX_BALANCE - MIN_BALANCE;
 		int balance;
-		
-		balance = (int)(Math.random() * dif + MIN_BALANCE + 1);
+
+		balance = (int) (Math.random() * dif + MIN_BALANCE + 1);
 		return balance;
 	}
-	
-	
+
 }

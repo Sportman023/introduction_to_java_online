@@ -1,14 +1,14 @@
 package by.training.inroduction_to_java_online.programming_with_classes.simple_classes_and_objects;
 
-
 /**
-* Задача: Опишите класс, реализующий десятичный счетчик,
-* который может увеличивать или уменьшать свое значение на единицу в заданном диапазоне.
-* Предусмотрите инициализацию счетчика значениями по умолчанию и произвольными значениями.
-* Счетчик имеет методы увеличения и уменьшения состояния, и метод позволяющее получить его текущее состояние.
-* Написать код, демонстрирующий все возможности класса.
-*
-*/
+ * Задача: Опишите класс, реализующий десятичный счетчик, который может
+ * увеличивать или уменьшать свое значение на единицу в заданном диапазоне.
+ * Предусмотрите инициализацию счетчика значениями по умолчанию и произвольными
+ * значениями. Счетчик имеет методы увеличения и уменьшения состояния, и метод
+ * позволяющее получить его текущее состояние. Написать код, демонстрирующий все
+ * возможности класса.
+ *
+ */
 public class SimpleClassesAndObjectsTask05 {
 
 	public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class SimpleClassesAndObjectsTask05 {
 		System.out.println(cntr.getCurrentValue());
 //������������ ����������
 		for (int i = cntr.getMinValue(); i < cntr.getMaxValue(); i++) {
-			cntr.increaseValue();					
+			cntr.increaseValue();
 			System.out.println(cntr.getCurrentValue());
 		}
 // ������������ ����������
@@ -28,16 +28,16 @@ public class SimpleClassesAndObjectsTask05 {
 		cntr.setCurrentValue(77);
 		System.out.println(cntr.getCurrentValue());
 	}
-	
-	private class Counter{
-		private int[] currentValue = new int [3];
+
+	private class Counter {
+		private int[] currentValue = new int[3];
 		private int minValue = 0;
 		private int maxValue = 100;
 
 		public Counter() {
 			setCurrentValue(minValue);
 		}
-		
+
 		public String getCurrentValue() {
 			String result = "";
 			for (int i = 0; i < currentValue.length; i++) {
@@ -45,17 +45,17 @@ public class SimpleClassesAndObjectsTask05 {
 			}
 			return result;
 		}
-		
+
 		public void setCurrentValue(int newVal) {
 			int arrLength = this.currentValue.length;
-			
+
 			for (int i = 0; i < arrLength; i++) {
-				currentValue[i] = (newVal % (int)Math.pow(10, arrLength - i) - newVal 
-						 				% (int)Math.pow(10, arrLength - i - 1)) / (int)Math.pow(10, arrLength - i - 1);
+				currentValue[i] = (newVal % (int) Math.pow(10, arrLength - i)
+						- newVal % (int) Math.pow(10, arrLength - i - 1)) / (int) Math.pow(10, arrLength - i - 1);
 			}
 			checkRange();
 		}
-		
+
 		public int getMinValue() {
 			return minValue;
 		}
@@ -82,7 +82,7 @@ public class SimpleClassesAndObjectsTask05 {
 			}
 			checkRange();
 		}
-		
+
 		public void decreaseValue() {
 			int step = 1;
 			for (int i = currentValue.length - 1; i >= 0; i--) {
@@ -95,16 +95,16 @@ public class SimpleClassesAndObjectsTask05 {
 			}
 			checkRange();
 		}
-		
+
 		private void checkRange() {
 			int currVal = 0;
 			int newVal;
 			int arrLength = currentValue.length;
-			
+
 			for (int i = 0; i < arrLength; i++) {
-				currVal = currVal + currentValue[i] * (int)Math.pow(10, arrLength - i - 1);				
+				currVal = currVal + currentValue[i] * (int) Math.pow(10, arrLength - i - 1);
 			}
-			
+
 			if (currVal > maxValue) {
 				newVal = maxValue;
 			} else if (currVal < minValue) {
@@ -112,14 +112,14 @@ public class SimpleClassesAndObjectsTask05 {
 			} else {
 				newVal = currVal;
 			}
-			
+
 			if (currVal != newVal) {
 				for (int i = 0; i < arrLength; i++) {
-					currentValue[i] = (newVal % (int)Math.pow(10, arrLength - i) - newVal 
-							 				% (int)Math.pow(10, arrLength - i - 1)) / (int)Math.pow(10, arrLength - i - 1);
+					currentValue[i] = (newVal % (int) Math.pow(10, arrLength - i)
+							- newVal % (int) Math.pow(10, arrLength - i - 1)) / (int) Math.pow(10, arrLength - i - 1);
 				}
 			}
-			
-		}		
+
+		}
 	}
 }
