@@ -19,10 +19,6 @@ public class Main {
 		customNumberView.multiplyCustomNumber();
 		customNumberView.divideCustomNumber();
 		
-		ArrayList<CustomNumber> cn = customNumberController.getCustomNumberList();
-		for (CustomNumber customNumber : cn) {
-			  System.out.println(customNumber.hashCode());
-		}
 	}
 
 }
